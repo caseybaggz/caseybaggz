@@ -1,27 +1,53 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Casey Baggz | Software Engineer</title> <meta name="description" content="Official website code evangelist Casey Baggz."> <meta name="keywords" content="casey baggz, front-end engineer, developer, web, web sites, software developer, software engineer, AngularJS, EmberJS, html, css, javascript, ui developer, digital design, software design, software developer, codepen, dribbble, google, dallas, dallas software engineer, dallas ui developer, dallas ui developer, phone apps, web apps, sites, code, open source code, web industry, github, twitter, linkedin"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"> <link rel="stylesheet" href="styles/main.0890f9d0.css"> <!--typekit FONTS--> <script>
-    (function(d) {
-      var config = {
-        kitId: 'ynm3pid',
-        scriptTimeout: 3000
-      },
-      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-    })(document);
-  </script>  <body ng-app="caseybaggzV3App"> <!--[if lte IE 8]>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Casey Baggz | Developer &amp; Speaker</title> <meta name="description" content="Official website code evangelist Casey Baggz."> <meta name="keywords" content="casey baggz, front-end engineer, developer, web, web sites, software developer, software engineer, AngularJS, EmberJS, html, css, javascript, ui developer, digital design, software design, software developer, codepen, dribbble, google, dallas, dallas software engineer, dallas ui developer, dallas ui developer, phone apps, web apps, sites, code, open source code, web industry, github, twitter, linkedin"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/main.css">
+  <body>
+    <!--[if lte IE 8]>
       <link rel="stylesheet" href="styles/ie.css">
         <div class="ieWrapper">
         <p class="browsehappy"><img src="images/logo/cb.91878e33.png" alt="casey baggz logo">
         Hello! As of June 2014, Microsoft has stopped contributing to IE 8. This is great news because
         it's one of the worst broswers in all of internet land! Chrome rules and is just as safe. Please
-        do yourself and the internet a favor and <a href="http://browsehappy.com/">upgrade your browser</a> 
+        do yourself and the internet a favor and <a href="http://browsehappy.com/">upgrade your browser</a>
         to improve your experience.</p>
         </div>
-    <![endif]--> <!-- Page Contents Here --> <div ng-include="'header.html'"></div> <div ng-view=""></div> <div ng-include="'footer.html'"></div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    <![endif]--> <!-- Page Contents Here -->
+
+    <div class="wrapper">
+      <header class="header">
+        <div class="logo-container">
+          <img src="images/cb.64169f3e.svg" alt="logo" />
+        </div>
+      </header>
+
+      <div class="feature">
+        <p class="feature-cap">squares conference 2016</p>
+      </div>
+
+      <div class="info-section">
+        <h3>speaker, developer, &amp; creative</h3>
+        <p>
+          Once designer, turned developer - I build web-apps that help make
+          life easier (and more fun). I'm proud to call Oven Bits home and work
+          along-side some crazy talented people, whom I love. When I'm not doing
+          that, I'm usually speaking or teaching at a conference or work place.
+          Hit me up on social media or <a href="mailto:caseybaggz@ovenbits.com">email me</a>
+          if you want to get to know each other more.
+        </p>
+      </div>
+
+      <footer class="footer">
+        
+      </footer>
+    </div>
+
+    <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
       ga('create', 'UA-47240246-1', 'caseybaggz.com');
       ga('require', 'displayfeatures');
-      ga('send', 'pageview');</script> <!--[if lt IE 9]>
-    <script src="scripts/oldieshim.ff90b0fb.js"></script>
-    <![endif]--> <script src="scripts/vendor.9ffcaeae.js"></script> <script src="scripts/scripts.c0d06a65.js"></script>  
+      ga('send', 'pageview');
+    </script>
+
+    <script src="scripts/main.js"></script>
+  </body>
+  </html>
