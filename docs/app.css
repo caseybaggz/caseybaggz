@@ -1360,19 +1360,13 @@ body {
   clear: both; }
 
 .app {
-  background: url("https://hd.unsplash.com/photo-1444136723005-b0f64ef04acc") no-repeat center center transparent;
+  background: url("images/backgrounds/main-mobile.png") no-repeat center center transparent;
   background-size: cover;
   min-height: 100%; }
-  .app:before {
-    background-color: rgba(0, 0, 0, 0.7);
-    bottom: 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%; }
+  @media only screen and (min-width: 767px) {
+    .app {
+      background: url("images/backgrounds/main.png") no-repeat center center transparent;
+      background-size: cover; } }
 
 .none {
   display: none; }
