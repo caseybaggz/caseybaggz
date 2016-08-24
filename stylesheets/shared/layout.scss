@@ -48,7 +48,7 @@ body {
 
 .app {
   background:
-    url("https://hd.unsplash.com/photo-1444136723005-b0f64ef04acc")
+    url("images/backgrounds/main-mobile.png")
     no-repeat
     center
     center
@@ -56,17 +56,15 @@ body {
   background-size: cover;
   min-height: 100%;
 
-  &:before {
-    background-color: rgba($black, 0.7);
-    bottom: 0;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-  }
+  @include respond-to(small) {
+    background:
+      url("images/backgrounds/main.png")
+      no-repeat
+      center
+      center
+      transparent;
+    background-size: cover;
+  };
 }
 
 .none {
