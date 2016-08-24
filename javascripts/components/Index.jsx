@@ -32,7 +32,7 @@ export default class Index extends React.Component {
         </div>
 
         <span className="logo-container">
-          <img className="img" src="/images/logos/baggz.svg" />
+          <img className="img" src="./images/logos/baggz.svg" />
         </span>
 
         <div className="view-content">
