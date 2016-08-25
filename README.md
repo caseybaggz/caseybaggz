@@ -6,7 +6,7 @@ Casey Baggz.com
 ### Next Updates
 * Add old Rails/React work from past year
   * Pros Admin CMS - React/Rails
-  * Lays FlavorSwap - React
+  * Lays FlavorSwap - Rails
 * create footer component & add to all views
 * create back button component & add to all views
 
