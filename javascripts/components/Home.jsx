@@ -1,22 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
+import NavLink from '../components/NavLink';
 
 
 export default class Home extends React.Component {
-  constructor() {
-    super();
-
-    // cache methods
-    this._animateCardsIn      = this._animateCardsIn.bind(this);
-    this._closeModal          = this._closeModal.bind(this);
-    this._getContent          = this._getContent.bind(this);
-    this._handleScroll        = this._handleScroll.bind(this);
-    this._handleSectionScroll = this._handleSectionScroll.bind(this);
-    this._showModal           = this._showModal.bind(this);
-    this._updateModal         = this._updateModal.bind(this);
-  }
-
-
   render() {
     return (
       <div className="home-view-container">
@@ -32,19 +19,19 @@ export default class Home extends React.Component {
           <p className="headline">recent work</p>
           <div className="work-wrapper">
             <div className="recent-item lays">
-              <a href="https://www.lays.com/" className="link" target="_blank">
+              <NavLink to="/works/lays" className="link">
                 <span className="info">
                   <p className="type">React, es6 & Rails</p>
                 </span>
-              </a>
+              </NavLink>
             </div>
 
             <div className="recent-item thrive">
-              <a href="http://thrive.ovenbits.com/#/?_k=3bwbd3" className="link" target="_blank">
+              <NavLink to="/works/thrive" className="link">
                 <span className="info">
                   <p className="type">React, es6 & Rails</p>
                 </span>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>
@@ -78,77 +65,4 @@ export default class Home extends React.Component {
 
   // PRIVATE
 
-  _animateCardsIn(el, index) {
-    window.setTimeout(() => {
-      el.classList.add('fadeInUp');
-    }, 100 * index);
-  }
-
-
-  _closeModal() {
-    const el_mainView = document.querySelector('.index-view-container');
-
-    this.setState({
-      modalContent: {}
-    }, () => {
-      el_mainView.classList.remove('box-active');
-    });
-  }
-
-
-  _getContent() {
-  }
-
-
-  _handleScroll() {
-    const el_home   = document.querySelector('.home-main');
-    const el_search = document.querySelector('.link-search-box-container');
-    const top = el_home.scrollTop;
-    const alreadyHidden = !!el_search.classList.contains('hidden');
-
-    this._handleSectionScroll(top);
-
-    if (alreadyHidden) {
-      return;
-    } else if (top >= 1 && top <= 100) {
-      el_home.classList.add('scrolling');
-      el_search.classList.add('hidden');
-    } else {
-      return;
-    }
-  }
-
-
-  _handleSectionScroll(scrollTop) {
-    const el_home      = document.querySelector('.home-main');
-    const el_section   = document.querySelector('.home-main-section');
-    const sectionH     = (el_section.clientHeight);
-    const currentIndex = Math.floor(scrollTop / sectionH + 0.5);
-
-    if (currentIndex !== this.state.currentIndex) {
-      this.setState({
-        currentIndex: currentIndex
-      });
-    } else {
-      return;
-    }
-  }
-
-
-  _showModal(props) {
-    const el_mainView = document.querySelector('.index-view-container');
-
-    this.setState({
-      modalContent: props
-    }, () => {
-      el_mainView.classList.add('box-active');
-    });
-  }
-
-
-  _updateModal(props) {
-    this.setState({
-      modalContent: props
-    });
-  }
 }
