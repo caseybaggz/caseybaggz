@@ -7,6 +7,7 @@ Casey Baggz.com
 * Add old Rails/React work from past year
   * Pros Admin CMS - React/Rails
   * Lays FlavorSwap - Rails
+  * LL Prototype - React/Rails
 * create footer component & add to all views
 * create back button component & add to all views
 
