@@ -9,7 +9,11 @@ export default class Works extends React.Component {
     this.state = {
       link: ''
     };
+
+    // cache methods
+    this._goBack = this._goBack.bind(this);
   }
+
 
   componentDidMount() {
     const item = document.querySelector('.item-container');
@@ -25,9 +29,12 @@ export default class Works extends React.Component {
     }, 800);
   }
 
+
   render() {
     return (
       <div className="works-view-container">
+        <span className="back-btn" onClick={ this._goBack }>back</span>
+
         <div className="feature">
           <div className="item-container animated">
             <img src={ './images/works/' + this.props.params.name + '.png' } className="img" />
@@ -51,5 +58,13 @@ export default class Works extends React.Component {
         </div>
       </div>
     );
+  }
+
+
+  // PRIVATE
+
+  _goBack() {
+    console.log('working');
+    window.history.back();
   }
 }
