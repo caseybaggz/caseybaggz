@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import NavLink from '../components/NavLink';
+import NavLink from './NavLink';
+import Footer from './Footer';
 
 
 export default class Home extends React.Component {
@@ -42,22 +43,7 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <footer className="footer">
-          <ul className="social-list">
-            <li className="item github">
-              <a href="https://github.com/caseybaggz" className="link" target="_blank" />
-            </li>
-            <li className="item linkedin">
-              <a href="https://www.linkedin.com/in/caseybaggz?trk=hp-identity-name" className="link" target="_blank" />
-            </li>
-            <li className="item twitter">
-              <a href="https://twitter.com/caseybaggz" className="link" target="_blank" />
-            </li>
-            <li className="item codepen">
-              <a href="http://codepen.io/caseybaggz/" className="link" target="_blank" />
-            </li>
-          </ul>
-        </footer>
+        <Footer />
       </div>
     );
   }

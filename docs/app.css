@@ -1440,8 +1440,51 @@ body {
   .index-view-container .view-content {
     position: relative; }
 
+.footer-container {
+  padding: 1em 0; }
+  .footer-container .social-list {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .footer-container .social-list .item {
+      background-color: #202020;
+      border-radius: 50%;
+      display: -ms-flexbox;
+      display: flex;
+      height: 3.75em;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin: 0 0.5em;
+      overflow: hidden;
+      width: 3.75em; }
+      .footer-container .social-list .item .link {
+        display: inline-block;
+        height: 100%;
+        width: 100%; }
+        .footer-container .social-list .item .link:focus {
+          background-color: transparent; }
+      .footer-container .social-list .item.codepen {
+        background: url("images/ico/codepen.svg") no-repeat center center #546575;
+        background-size: 2em; }
+      .footer-container .social-list .item.facebook {
+        background: url("images/ico/facebook.svg") no-repeat center center #546575;
+        background-size: 2em; }
+      .footer-container .social-list .item.github {
+        background: url("images/ico/github.svg") no-repeat center center #546575;
+        background-size: 2em; }
+      .footer-container .social-list .item.linkedin {
+        background: url("images/ico/linkedin.svg") no-repeat center center #546575;
+        background-size: 2em; }
+      .footer-container .social-list .item.twitter {
+        background: url("images/ico/twitter.svg") no-repeat center center #546575;
+        background-size: 2em; }
+
 .home-view-container {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 1em; }
   .home-view-container .feature {
     height: 95%;
     padding: 0 0 2em 0;
@@ -1533,47 +1576,6 @@ body {
     padding: 0.8em 2em;
     text-decoration: none;
     text-transform: uppercase; }
-  .home-view-container .footer {
-    padding: 1em; }
-  .home-view-container .social-list {
-    -ms-flex-align: center;
-    align-items: center;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center; }
-    .home-view-container .social-list .item {
-      background-color: #202020;
-      border-radius: 50%;
-      display: -ms-flexbox;
-      display: flex;
-      height: 3.75em;
-      -ms-flex-pack: center;
-      justify-content: center;
-      margin: 0 0.5em;
-      overflow: hidden;
-      width: 3.75em; }
-      .home-view-container .social-list .item .link {
-        display: inline-block;
-        height: 100%;
-        width: 100%; }
-        .home-view-container .social-list .item .link:focus {
-          background-color: transparent; }
-      .home-view-container .social-list .item.codepen {
-        background: url("images/ico/codepen.svg") no-repeat center center #546575;
-        background-size: 2em; }
-      .home-view-container .social-list .item.facebook {
-        background: url("images/ico/facebook.svg") no-repeat center center #546575;
-        background-size: 2em; }
-      .home-view-container .social-list .item.github {
-        background: url("images/ico/github.svg") no-repeat center center #546575;
-        background-size: 2em; }
-      .home-view-container .social-list .item.linkedin {
-        background: url("images/ico/linkedin.svg") no-repeat center center #546575;
-        background-size: 2em; }
-      .home-view-container .social-list .item.twitter {
-        background: url("images/ico/twitter.svg") no-repeat center center #546575;
-        background-size: 2em; }
 
 .works-view-container .feature {
   height: 10em;

@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer';
 import { Description } from '../Description';
 
 export default class Works extends React.Component {
@@ -45,6 +46,8 @@ export default class Works extends React.Component {
               <a href="mailto:caseybaggz@gmail.com" className="btn">let's talk</a>
             </div>
           </div>
+
+          <Footer />
         </div>
       </div>
     );
