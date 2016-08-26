@@ -1,0 +1,42 @@
+.footer-container {
+  padding: 1em 0;
+
+  .social-list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .item {
+      background-color: $dark;
+      border-radius: 50%;
+      display: flex;
+      height: 3.75em;
+      justify-content: center;
+      margin: 0 0.5em;
+      overflow: hidden;
+      width: 3.75em;
+
+      .link {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+
+        &:focus{
+          background-color: transparent;
+        }
+      }
+
+      @each $name in $social-networks {
+        &.#{ $name } {
+          background:
+            url("images/ico/#{ $name }.svg")
+            no-repeat
+            center
+            center
+            $primary;
+          background-size: 2em;
+        }
+      }
+    }
+  }
+}
