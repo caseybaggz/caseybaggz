@@ -64,7 +64,6 @@ export default class Works extends React.Component {
   // PRIVATE
 
   _goBack() {
-    console.log('working');
     window.history.back();
   }
 }
