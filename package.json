@@ -6,7 +6,8 @@
   "scripts": {
     "build": "gulp -p",
     "postinstall": "npm run build",
-    "start": "node ."
+    "start": "node .",
+    "test": ""
   },
   "engines": {
     "node": "6.3.1",
