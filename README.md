@@ -9,5 +9,5 @@ Casey Baggz.com
   * Pros Admin CMS - React/Rails
   * Lays FlavorSwap - Rails
   * LL Prototype - React/Rails
-* write tests... :(
-
+* Add JSON files for data fetching
+* write tests...
