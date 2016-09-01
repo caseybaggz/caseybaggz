@@ -18,6 +18,9 @@ export const Description = {
   The bot has some advanced css animations utilizing css-masks to fake the material
   design ink effect for opening and closing it.</p> \
 
+  <p>Our production stack included New Relic for performance monitoring,
+  Travis-CI for automated testing with RSpec, and Sentry for bug reporting.</p> \
+
   <p>This was really fun to do and a great start to a new year of growth and
   challenge.</p>`,
 
