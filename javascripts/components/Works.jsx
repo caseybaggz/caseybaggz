@@ -1,28 +1,30 @@
 import React from 'react';
 import Footer from './Footer';
-import { Description } from '../Description';
+import FetchHelper from '../FetchHelper';
 
 export default class Works extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      link: ''
+      link: '',
+      name: '',
+      description: []
     };
 
     // cache methods
     this._goBack = this._goBack.bind(this);
+    this._updateData = this._updateData.bind(this);
   }
 
 
   componentDidMount() {
     const item = document.querySelector('.item-container');
-    const txtContainer = document.querySelector('.description');
-    const description  = Description[this.props.params.name];
-    const newLink = Description[this.props.params.name + 'Link'];
 
-    txtContainer.innerHTML = description;
-    this.setState({ link: newLink });
+    fetch('./works.json')
+      .then(FetchHelper.status)
+      .then(FetchHelper.parseJSON)
+      .then(this._updateData);
 
     window.setTimeout(() => {
       item.classList.add('fadeInDown');
@@ -46,7 +48,14 @@ export default class Works extends React.Component {
           <div className="link-container">
             <a href={ this.state.link } className="link" target="_blank">visit site</a>
           </div>
-          <p className="description" />
+
+          <div className="description">
+            {
+              this.state.description.map((p, index) => (
+                <p key={ index }>{ p }</p>
+              ))
+            }
+          </div>
 
           <div className="cta-wrapper">
             <div className="btn-wrapper">
@@ -65,5 +74,21 @@ export default class Works extends React.Component {
 
   _goBack() {
     window.history.back();
+  }
+
+
+  _updateData(data) {
+    const descArray = [];
+    const item = data.filter(item => (
+      item.name === this.props.params.name
+    ));
+
+    item[0].content.map(paragraph => {
+      descArray.push(paragraph);
+    });
+
+    this.setState({
+      description: descArray
+    });
   }
 }
