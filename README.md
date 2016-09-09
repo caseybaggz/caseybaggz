@@ -14,4 +14,3 @@ Casey Baggz.com
   * Sister Technologies Android Camera App - Android
 * Old other things
   * Sister Technologies custom video player for streaming / JS & jQuery
-* write tests...
