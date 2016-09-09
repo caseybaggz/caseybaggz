@@ -79,15 +79,16 @@ export default class Works extends React.Component {
 
   _updateData(data) {
     const descArray = [];
-    const item = data.filter(item => (
+    const item = data.find(item => (
       item.name === this.props.params.name
     ));
 
-    item[0].content.map(paragraph => {
+    item.content.map(paragraph => {
       descArray.push(paragraph);
     });
 
     this.setState({
+      link: item.url,
       description: descArray
     });
   }
