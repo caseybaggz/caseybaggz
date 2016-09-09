@@ -1,0 +1,20 @@
+exports[`test should render Index component successfully 1`] = `
+<div
+  className="index-view-container animated">
+  <div
+    className="blog-link-wrapper">
+    <a
+      className="link"
+      href="https://medium.com/@caseybaggz"
+      target="_blank" />
+  </div>
+  <span
+    className="logo-container">
+    <img
+      className="img"
+      src="./images/logos/baggz.svg" />
+  </span>
+  <div
+    className="view-content" />
+</div>
+`;

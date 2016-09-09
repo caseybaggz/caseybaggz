@@ -1,0 +1,5 @@
+exports[`test should render NavLink component successfully 1`] = `
+<a
+  onClick={[Function bound handleClick]}
+  style={Object {}} />
+`;

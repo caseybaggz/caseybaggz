@@ -15,15 +15,15 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.web.js', '.jsx', '.js']
+    extensions: ['', '.web.js', '.js', '.jsx']
   },
 
   module: {
     loaders: [
       {
-        test: /.jsx?$/,
+        test: /.js?$/,
         loader: 'babel-loader',
-        exclude: /node_modules/
+        exclude: ['node_modules']
       }
     ]
   }

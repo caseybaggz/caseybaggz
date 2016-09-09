@@ -53,7 +53,7 @@ gulp.task('scss-lint', () => {
 
 
 gulp.task('scripts', () => {
-  return gulp.src('javascripts/App.jsx')
+  return gulp.src('javascripts/App.js')
     .pipe(named())
     .pipe(webpack(webpackConfig))
     .pipe(gulp.dest('docs/'));
@@ -65,7 +65,7 @@ gulp.task('scripts', () => {
 
 gulp.task('watch', ['html', 'images', 'scss-lint', 'styles', 'scripts'], function() {
     gulp.watch("./stylesheets/**/*.scss", ['scss-lint', 'styles', 'images']).on('change', browserSync.reload);
-    gulp.watch("./javascripts/**/*.jsx", ['scripts']).on('change', browserSync.reload);
+    gulp.watch("./javascripts/**/*.js", ['scripts']).on('change', browserSync.reload);
     gulp.watch("./*.html", ['html', 'images']).on('change', browserSync.reload);
 });
 

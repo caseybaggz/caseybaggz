@@ -1,0 +1,36 @@
+exports[`test should render Footer component successfully 1`] = `
+<footer
+  className="footer-container">
+  <ul
+    className="social-list">
+    <li
+      className="item github">
+      <a
+        className="link"
+        href="https://github.com/caseybaggz"
+        target="_blank" />
+    </li>
+    <li
+      className="item linkedin">
+      <a
+        className="link"
+        href="https://www.linkedin.com/in/caseybaggz"
+        target="_blank" />
+    </li>
+    <li
+      className="item twitter">
+      <a
+        className="link"
+        href="https://twitter.com/caseybaggz"
+        target="_blank" />
+    </li>
+    <li
+      className="item codepen">
+      <a
+        className="link"
+        href="http://codepen.io/caseybaggz/"
+        target="_blank" />
+    </li>
+  </ul>
+</footer>
+`;
