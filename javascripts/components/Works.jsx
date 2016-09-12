@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 import React from 'react';
 import Footer from './Footer';
 import FetchHelper from '../FetchHelper';
