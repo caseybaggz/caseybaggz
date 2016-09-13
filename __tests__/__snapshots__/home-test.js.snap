@@ -1,0 +1,100 @@
+exports[`test should render Home component successfully 1`] = `
+<div
+  className="home-view-container">
+  <div
+    className="feature">
+    <p
+      className="sub-headline">
+      React & Rails
+      <span
+        className="br-mobile" />
+      Creative Developer
+    </p>
+  </div>
+  <div
+    className="recent-work-container">
+    <p
+      className="headline">
+      recent work
+    </p>
+    <div
+      className="work-wrapper">
+      <div
+        className="recent-item lays">
+        <a
+          className="link"
+          onClick={[Function bound handleClick]}
+          style={Object {}}>
+          <span
+            className="info">
+            <p
+              className="type">
+              React, es6 & Rails
+            </p>
+          </span>
+        </a>
+      </div>
+      <div
+        className="recent-item thrive">
+        <a
+          className="link"
+          onClick={[Function bound handleClick]}
+          style={Object {}}>
+          <span
+            className="info">
+            <p
+              className="type">
+              React, es6 & Rails
+            </p>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="cta-wrapper">
+    <div
+      className="btn-wrapper">
+      <a
+        className="btn"
+        href="mailto:caseybaggz@gmail.com">
+        let\'s talk
+      </a>
+    </div>
+  </div>
+  <footer
+    className="footer-container">
+    <ul
+      className="social-list">
+      <li
+        className="item github">
+        <a
+          className="link"
+          href="https://github.com/caseybaggz"
+          target="_blank" />
+      </li>
+      <li
+        className="item linkedin">
+        <a
+          className="link"
+          href="https://www.linkedin.com/in/caseybaggz"
+          target="_blank" />
+      </li>
+      <li
+        className="item twitter">
+        <a
+          className="link"
+          href="https://twitter.com/caseybaggz"
+          target="_blank" />
+      </li>
+      <li
+        className="item codepen">
+        <a
+          className="link"
+          href="http://codepen.io/caseybaggz/"
+          target="_blank" />
+      </li>
+    </ul>
+  </footer>
+</div>
+`;
