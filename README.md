@@ -9,6 +9,8 @@ Casey Baggz.com
   * Pros Admin CMS - React/Rails
   * Lays FlavorSwap - Rails
   * LL Prototype - React/Rails
+* Old apps
+  * Kids Bible App games
 * Old work IoTs related
   * Sabre TripCase Samsung Smartwatch app - Tizen OS
   * Sister Technologies Android Camera App - Android
