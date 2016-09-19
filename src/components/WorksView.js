@@ -24,7 +24,7 @@ export default class WorksView extends Component {
   componentDidMount() {
     const item = document.querySelector('.item-container');
 
-    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/update-paths/api/works.json')
+    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/master/api/works.json')
       .then(FetchHelper.status)
       .then(FetchHelper.parseJSON)
       .then(this._updateData);
