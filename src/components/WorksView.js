@@ -1,6 +1,7 @@
 import 'whatwg-fetch';
 import React, { Component } from 'react';
 import Footer from './Footer';
+import WorksFeatureImg from './WorksFeatureImg';
 import FetchHelper from '../classes/FetchHelper';
 import '../stylesheets/WorksView.css';
 
@@ -39,9 +40,7 @@ export default class WorksView extends Component {
         <span className="back-btn" onClick={ this._goBack }>back</span>
 
         <div className="feature">
-          <div className="item-container animated">
-            <img src={ '../images/works/' + this.props.params.name + '.png' } className="img" alt="feature" />
-          </div>
+          <WorksFeatureImg { ...this.props.params } />
         </div>
 
         <div className="main-section">
