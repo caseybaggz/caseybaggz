@@ -1,6 +1,6 @@
 .btn {
   background-color: #f39121;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2px;
   color: #fff;
   cursor: pointer;
@@ -19,8 +19,9 @@
 }
 
 .btn:hover {
-  color: #556574;
   background-color: #fff;
+  border: 1px solid #556574;
+  color: #556574;
 }
 
 .btn-wrapper {
