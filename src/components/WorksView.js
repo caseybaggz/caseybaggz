@@ -24,7 +24,7 @@ export default class WorksView extends Component {
   componentDidMount() {
     const item = document.querySelector('.item-container');
 
-    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/master/docs/works.json')
+    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/update-paths/api/works.json')
       .then(FetchHelper.status)
       .then(FetchHelper.parseJSON)
       .then(this._updateData);
@@ -83,9 +83,9 @@ export default class WorksView extends Component {
       item.name === this.props.params.name
     ));
 
-    item.content.map(paragraph => {
-      descArray.push(paragraph);
-    });
+    for (var i = 0; i < item.content.length; i++) {
+      descArray.push(item.content[i]);
+    }
 
     this.setState({
       link: item.url,

@@ -34,7 +34,7 @@ export default class FooterLink extends Component {
 
     return (
       <li className={ 'footer-item ' + css(itemBg[this.props.name]) } style={ itemStyle }>
-        <a href={ this.props.link } className="link" target="_blank" />
+        <a href={ this.props.url } className="link" target="_blank" />
       </li>
     );
   }
