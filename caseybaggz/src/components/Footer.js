@@ -14,7 +14,7 @@ export default class Footer extends Component {
   }
 
   componentDidMount() {
-    fetch('./social-links.json')
+    fetch('/social-links.json')
       .then(FetchHelper.status)
       .then(FetchHelper.parseJSON)
       .then((data) => {

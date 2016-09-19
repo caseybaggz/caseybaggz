@@ -2,6 +2,7 @@
   "name": "caseybaggz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://caseybaggz.github.io/caseybaggz",
   "devDependencies": {
     "react-scripts": "0.4.3"
   },

@@ -23,7 +23,7 @@ export default class WorksView extends Component {
   componentDidMount() {
     const item = document.querySelector('.item-container');
 
-    fetch('./works.json')
+    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/master/docs/works.json')
       .then(FetchHelper.status)
       .then(FetchHelper.parseJSON)
       .then(this._updateData);
