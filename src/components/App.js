@@ -5,7 +5,6 @@ import HomeView from './HomeView';
 import WorksView from './WorksView';
 import '../stylesheets/vendors/normalize.css';
 import '../stylesheets/vendors/animate.css';
-import '../stylesheets/App.css';
 import '../stylesheets/shared/buttons.css';
 
 
