@@ -59,7 +59,7 @@ export default class WorksView extends Component {
 
           <div className="cta-wrapper">
             <div className="btn-wrapper">
-              <a href="mailto:caseybaggz@gmail.com" className="btn">lets talk</a>
+              <a href="mailto:caseybaggz@gmail.com" className="btn mail-btn">lets talk</a>
             </div>
           </div>
 

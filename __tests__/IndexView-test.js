@@ -6,13 +6,13 @@ import IndexView from '../src/components/IndexView';
 
 describe('IndexView Component', () => {
 
-  it('renders without crashing', () => {
+  it('should render without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<IndexView />, div);
   });
 
 
-  it('has a medium blog link', () => {
+  it('should have a medium blog link', () => {
     const page = TestUtils.renderIntoDocument(<IndexView />);
     const button = TestUtils.findRenderedDOMComponentWithTag(page, 'a');
 
@@ -27,7 +27,7 @@ describe('IndexView Component', () => {
   });
 
 
-  it('has a caseybaggz logo', () => {
+  it('should have a caseybaggz logo', () => {
     const page = TestUtils.renderIntoDocument(<IndexView />);
     const logo = TestUtils.findRenderedDOMComponentWithTag(page, 'img');
 
