@@ -36,19 +36,27 @@ describe('WorksView Component', () => {
   });
 
 
-  it('should have a mailto link', () => {
+  it('should have a MailBtn component', () => {
     const page = TestUtils.renderIntoDocument(<WorksView params={ data } />);
     const btn  = TestUtils.findRenderedDOMComponentWithClass(page, 'mail-btn');
 
     expect(ReactDOM.findDOMNode(btn).className).toBe('btn mail-btn');
     expect(ReactDOM.findDOMNode(btn).href).toBe('mailto:caseybaggz@gmail.com');
-    expect(ReactDOM.findDOMNode(btn).textContent).toBe('lets talk');
+    expect(ReactDOM.findDOMNode(btn).textContent).toBe("let's talk");
 
     // similate click
     TestUtils.Simulate.click(btn);
 
     // make sure link goes to home view
     expect(window.location.href).toBe('about:blank');
+  });
+
+
+  it('should have a Footer component', () => {
+    const page = TestUtils.renderIntoDocument(<WorksView params={ data } />);
+    const footer = TestUtils.findRenderedDOMComponentWithTag(page, 'footer');
+
+    expect(ReactDOM.findDOMNode(footer).className).toBe('footer-container');
   });
 
 });
