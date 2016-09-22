@@ -1,6 +1,7 @@
 import 'whatwg-fetch';
 import React, { Component } from 'react';
 import Footer from './Footer';
+import MailBtn from './MailBtn';
 import WorksFeatureImg from './WorksFeatureImg';
 import FetchHelper from '../classes/FetchHelper';
 import '../stylesheets/WorksView.css';
@@ -59,7 +60,7 @@ export default class WorksView extends Component {
 
           <div className="cta-wrapper">
             <div className="btn-wrapper">
-              <a href="mailto:caseybaggz@gmail.com" className="btn mail-btn">lets talk</a>
+              <MailBtn />
             </div>
           </div>
 

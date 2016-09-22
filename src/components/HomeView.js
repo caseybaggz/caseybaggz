@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RecentItem from './RecentItem';
 import Footer from './Footer';
+import MailBtn from './MailBtn';
 import '../stylesheets/HomeView.css';
 
 
@@ -40,7 +41,7 @@ export default class HomeView extends Component {
 
         <div className="cta-wrapper">
           <div className="btn-wrapper">
-            <a href="mailto:caseybaggz@gmail.com" className="btn">{ "let's talk" }</a>
+            <MailBtn />
           </div>
         </div>
 
