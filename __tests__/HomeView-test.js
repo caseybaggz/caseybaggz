@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { StyleSheetTestUtils } from 'aphrodite';
 import TestUtils from 'react-addons-test-utils';
 import HomeView from '../src/components/HomeView';
 
 
 describe('HomeView Component', () => {
+
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
+  afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
+  });
+
 
   it('should render without crashing', () => {
     const div = document.createElement('div');
