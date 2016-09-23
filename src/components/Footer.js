@@ -4,6 +4,7 @@ import FooterLink from './FooterLink';
 import FetchHelper from '../classes/FetchHelper';
 import '../stylesheets/Footer.css';
 
+
 export default class Footer extends Component {
   constructor() {
     super();
