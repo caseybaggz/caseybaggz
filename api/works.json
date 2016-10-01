@@ -1,7 +1,7 @@
 [
   {
     "name": "lays",
-    "url": "https://www.lays.com/",
+    "url": "https://www.lays.com/passport",
     "content": [
       "I had the priviledge to lead the front end for the latest Lays campaign called \"The Passport to Flavor\". The concept was to allow users to have a simple account where they would enter codes and receive \"miles\" to spend and stamps to add to their \"passport\" for a grand prize trip.",
       "Keeping track of users accounts through Rails was a great way to start. From there I managed the front end utilizing a small helper toolbelt with Normalize, Animate.css, LoDash, and es6. Knowing I wanted some intricate view transitions and binding I decided to utilize the power of React to allow us the ability to create a web-component based app.",
