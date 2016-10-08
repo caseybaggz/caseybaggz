@@ -21,18 +21,6 @@ export default class WorksView extends Component {
     this._updateData = this._updateData.bind(this);
   }
 
-  componentDidMount() {
-    const item = document.querySelector('.item-container');
-
-    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/master/api/works.json')
-      .then(FetchHelper.status)
-      .then(FetchHelper.parseJSON)
-      .then(this._updateData);
-
-    window.setTimeout(() => {
-      item.classList.add('fadeInDown');
-    }, 800);
-  }
 
   render() {
     return (
@@ -67,6 +55,20 @@ export default class WorksView extends Component {
         </div>
       </div>
     );
+  }
+
+
+  componentDidMount() {
+    const item = document.querySelector('.item-container');
+
+    fetch(`${ process.env.PUBLIC_URL }/works.json`)
+      .then(FetchHelper.status)
+      .then(FetchHelper.parseJSON)
+      .then(this._updateData);
+
+    window.setTimeout(() => {
+      item.classList.add('fadeInDown');
+    }, 800);
   }
 
 

@@ -13,17 +13,6 @@ export default class Footer extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch('https://raw.githubusercontent.com/caseybaggz/caseybaggz/master/api/social-links.json')
-      .then(FetchHelper.status)
-      .then(FetchHelper.parseJSON)
-      .then((data) => {
-        this.setState({ items: data });
-      })
-      .catch((e) => {
-        console.warn(e);
-      });
-  }
 
   render() {
     return (
@@ -37,5 +26,18 @@ export default class Footer extends Component {
         </ul>
       </footer>
     );
+  }
+
+
+  componentDidMount() {
+    fetch(`${ process.env.PUBLIC_URL }/social-links.json`)
+      .then(FetchHelper.status)
+      .then(FetchHelper.parseJSON)
+      .then((data) => {
+        this.setState({ items: data });
+      })
+      .catch((e) => {
+        console.warn(e);
+      });
   }
 }
