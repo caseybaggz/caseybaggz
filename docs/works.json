@@ -1,0 +1,31 @@
+[
+  {
+    "name": "lays",
+    "url": "https://www.lays.com/passport",
+    "content": [
+      "I had the priviledge to lead the front end for the latest Lays campaign called \"The Passport to Flavor\". The concept was to allow users to have a simple account where they would enter codes and receive \"miles\" to spend and stamps to add to their \"passport\" for a grand prize trip.",
+      "Keeping track of users accounts through Rails was a great way to start. From there I managed the front end utilizing a small helper toolbelt with Normalize, Animate.css, LoDash, and es6. Knowing I wanted some intricate view transitions and binding I decided to utilize the power of React to allow us the ability to create a web-component based app.",
+      "In the end product we used and customized the Slick Carousel for the main view and some nice transition tricks for the \"multi-view\" raffle/passport component. The bot has some advanced css animations utilizing css-masks to fake the material design ink effect for opening and closing it.",
+      "Our production stack included New Relic for performance monitoring, Travis-CI for automated testing with RSpec, and Sentry for bug reporting",
+      "This was really fun to do and a great start to a new year of growth and challenge."
+    ]
+  },
+  {
+    "name": "thrive",
+    "url": "http://thrive.ovenbits.com/",
+    "content": [
+      "PROTOTYPE - Purely front-end this is a straight React app utilizing the goodness of es6. Built with static data for dev speed this is one of the cleanest React apps I've had the priviledge to build. There is still much room for growth regarding learning new stuff, but I'm pretty satisfied with this app.",
+      "The tool suite is nothing major, just the basics. Although, this project was the first to allow me to start creating the \"Baggz-kit\" suite. I found that I was just using the same patterns in all my other projects, so from this one birthed the original Baggz-kit UI...kit. Made for Rails apps, it's a nice starting set-up with an index.html meta starting point along with Sass and JS inits. LoDash, Fetch Polyfill, Animate.css, and Normalize come built into the kit for a nice bonus too.",
+      "From a technical standpoint, most of this app is inheriting prop types from parents and utilizing the power of Animate.css and vanilla scroll events to do some nice little magic with the scroll button. This was a crazy fun idea to have the opportunity to build and get a better feel for React."
+    ]
+  },
+  {
+    "name": "pros admin cms",
+    "url": "https://www.theprosapp.com/admin/sign-in",
+    "content": [
+      "A hybrid Rails/React app, this one was interesting and fun to do. At it's base, it's just your normal CRUD app - but I was able to incorportate some advanced nested views in the UI utilizing transitioning the transform property.",
+      "We are using Rails to handle all the routing and initial server side rendering then following it up with React managing the state with the Flux pattern and data-binding all the results from the CRUD fetch responses on the front-end. Outside of that we are of course using LoDash & Animate.css for all the Modal and intro animations of the CRUD items. Once again, using Travis-CI for automated testing, RSPec & Capybara for our test framework, and New Relic for diagnostics.",
+      "Bare-bones, raw Rails, and a cherry on top with React helping the front end be more flexible and real-time. So fun."
+    ]
+  }
+]
