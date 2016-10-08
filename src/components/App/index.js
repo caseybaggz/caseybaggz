@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router';
-import logException from '../classes/Sentry';
-import IndexView from './IndexView';
-import HomeView from './HomeView';
-import WorksView from './WorksView';
-import '../stylesheets/vendors/normalize.css';
-import '../stylesheets/vendors/animate.css';
-import '../stylesheets/shared/buttons.css';
+import logException from '../../classes/Sentry';
+import IndexView from '../IndexView';
+import HomeView from '../HomeView';
+import WorksView from '../WorksView';
+import '../../stylesheets/shared/buttons.css';
 
 
 export default class App extends Component {

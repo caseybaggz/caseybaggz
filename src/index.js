@@ -1,3 +1,5 @@
+import 'normalize.css';
+import 'animate.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Raven from 'raven-js';
