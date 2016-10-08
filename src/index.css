@@ -45,7 +45,7 @@ body {
 
 .app {
   background:
-    url(../images/backgrounds/main-mobile.png)
+    url(./images/backgrounds/main-mobile.png)
     no-repeat
     center
     center
@@ -69,7 +69,7 @@ body {
 @media only screen and (min-width: 600px) {
   .app {
     background:
-      url(../images/backgrounds/main.png)
+      url(./images/backgrounds/main.png)
       no-repeat
       center
       center

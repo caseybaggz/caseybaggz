@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import githubIco from '../images/ico/github.svg';
-import codepenIco from '../images/ico/codepen.svg';
-import twitterIco from '../images/ico/twitter.svg';
-import linkedinIco from '../images/ico/linkedin.svg';
-import '../stylesheets/FooterLink.css';
+import githubIco from '../../images/ico/github.svg';
+import codepenIco from '../../images/ico/codepen.svg';
+import twitterIco from '../../images/ico/twitter.svg';
+import linkedinIco from '../../images/ico/linkedin.svg';
+import './FooterLink.css';
 
 
 const itemBg = StyleSheet.create({

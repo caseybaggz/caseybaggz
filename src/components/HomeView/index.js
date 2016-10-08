@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import RecentItem from './RecentItem';
-import Footer from './Footer';
-import MailBtn from './MailBtn';
-import '../stylesheets/HomeView.css';
+import RecentItem from '../RecentItem';
+import Footer from '../Footer';
+import MailBtn from '../MailBtn';
+import './HomeView.css';
 
 
 export default class HomeView extends Component {

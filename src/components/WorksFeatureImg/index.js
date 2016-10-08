@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import laysImg from '../images/works/lays.png';
-import thriveImg from '../images/works/thrive.png';
+import laysImg from '../../images/works/lays.png';
+import thriveImg from '../../images/works/thrive.png';
+
 
 export default class WorksFeatureImg extends Component {
   constructor() {
