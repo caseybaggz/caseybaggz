@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { StyleSheetTestUtils } from 'aphrodite';
 import TestUtils from 'react-addons-test-utils';
-import HomeView from '../src/components/HomeView';
+import HomeView from './';
 
 
 describe('HomeView Component', () => {

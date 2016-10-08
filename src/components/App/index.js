@@ -4,7 +4,7 @@ import logException from '../../classes/Sentry';
 import IndexView from '../IndexView';
 import HomeView from '../HomeView';
 import WorksView from '../WorksView';
-import '../../stylesheets/shared/buttons.css';
+import '../../stylesheets/buttons.css';
 
 
 export default class App extends Component {

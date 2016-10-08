@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import NavLink from './NavLink';
-import laysBg from '../images/backgrounds/lays.png';
-import thriveBg from '../images/backgrounds/thrive.png';
-import '../stylesheets/RecentItem.css';
+import NavLink from '../NavLink';
+import laysBg from '../../images/backgrounds/lays.png';
+import thriveBg from '../../images/backgrounds/thrive.png';
+import './RecentItem.css';
 
 
 const itemBackground = StyleSheet.create({

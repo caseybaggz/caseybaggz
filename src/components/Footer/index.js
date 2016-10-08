@@ -1,8 +1,7 @@
-import 'whatwg-fetch';
 import React, { Component } from 'react';
-import FooterLink from './FooterLink';
-import FetchHelper from '../classes/FetchHelper';
-import '../stylesheets/Footer.css';
+import FooterLink from '../FooterLink';
+import FetchHelper from '../../classes/FetchHelper';
+import './Footer.css';
 
 
 export default class Footer extends Component {

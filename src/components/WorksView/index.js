@@ -1,10 +1,9 @@
-import 'whatwg-fetch';
 import React, { Component } from 'react';
-import Footer from './Footer';
-import MailBtn from './MailBtn';
-import WorksFeatureImg from './WorksFeatureImg';
-import FetchHelper from '../classes/FetchHelper';
-import '../stylesheets/WorksView.css';
+import Footer from '../Footer';
+import MailBtn from '../MailBtn';
+import WorksFeatureImg from '../WorksFeatureImg';
+import FetchHelper from '../../classes/FetchHelper';
+import './WorksView.css';
 
 
 export default class WorksView extends Component {

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import WorksView from '../src/components/WorksView';
+import WorksView from './';
+
 
 describe('WorksView Component', () => {
   const data = { name: 'testItem' };

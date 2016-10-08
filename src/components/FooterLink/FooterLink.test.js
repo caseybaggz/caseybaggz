@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { StyleSheetTestUtils } from 'aphrodite';
 import TestUtils from 'react-addons-test-utils';
-import FooterLink from '../src/components/FooterLink';
+import FooterLink from './';
 
 
 describe('FooterLink component', () => {
