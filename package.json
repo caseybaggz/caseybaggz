@@ -3,22 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "aphrodite": "^0.5.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
     "enzyme": "^2.4.1",
     "react-addons-test-utils": "^0.14.0",
-    "react-scripts": "0.6.1",
-    "react-test-renderer": "^15.3.2"
+    "react-scripts": "0.6.1"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
     "aphrodite": "^0.5.0",
     "normalize.css": "^5.0.0",
     "raven-js": "^3.7.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.6.0"
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
