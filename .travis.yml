@@ -6,3 +6,5 @@ cache:
   - node_modules
 script:
   - npm test
+notifications:
+  webhooks: https://coveralls.io/webhook?repo_token=1BXJrX0DTLvcULsgbPMRfIS6hb1C50Wpm
