@@ -4,6 +4,8 @@ import { StyleSheetTestUtils } from 'aphrodite';
 import { mount } from 'enzyme';
 import TestUtils from 'react-addons-test-utils';
 import HomeView from './';
+import MailBtn from '../MailBtn';
+import Footer from '../Footer';
 
 
 describe('HomeView Component', () => {
@@ -30,25 +32,15 @@ describe('HomeView Component', () => {
   });
 
   it('should have a MailBtn component', () => {
-    const page = TestUtils.renderIntoDocument(<HomeView />);
-    const btn  = TestUtils.findRenderedDOMComponentWithClass(page, 'mail-btn');
-
-    expect(ReactDOM.findDOMNode(btn).className).toBe('btn mail-btn');
-    expect(ReactDOM.findDOMNode(btn).href).toBe('mailto:caseybaggz@gmail.com');
-    expect(ReactDOM.findDOMNode(btn).textContent).toBe("let's talk");
-
-    // similate click
-    TestUtils.Simulate.click(btn);
-
-    // make sure link goes to home view
-    expect(window.location.href).toBe('about:blank');
+    const wrapper = mount(<HomeView />);
+    expect(wrapper.contains(<MailBtn />)).toEqual(true);
+    expect(wrapper.contains(<MailBtn />)).not.toEqual(false);
   });
 
   it('should have a Footer component', () => {
-    const page = TestUtils.renderIntoDocument(<HomeView />);
-    const footer = TestUtils.findRenderedDOMComponentWithTag(page, 'footer');
-
-    expect(ReactDOM.findDOMNode(footer).className).toBe('Footer');
+    const wrapper = mount(<HomeView />);
+    expect(wrapper.contains(<Footer />)).toEqual(true);
+    expect(wrapper.contains(<Footer />)).not.toEqual(false);
   });
 
 });
