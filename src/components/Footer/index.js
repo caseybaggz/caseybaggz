@@ -1,43 +1,36 @@
 import React, { Component } from 'react';
 import FooterLink from '../FooterLink';
-import FetchHelper from '../../classes/FetchHelper';
+import SocialLinks from './social-links.json';
 import './Footer.css';
 
 
 export default class Footer extends Component {
   constructor() {
     super();
+    this.items = SocialLinks;
 
-    this.state = {
-      items: []
-    };
+    // cache methods
+    this._getItems = this._getItems.bind(this);
+  }
+
+  // PRIVATE
+
+  _getItems() {
+    return this.items.map((item, index) => (
+      <FooterLink { ...item } key={ index } />
+    ));
   }
 
 
   render() {
+    const items = this._getItems();
+
     return (
-      <footer className="footer-container">
-        <ul className="social-list">
-          {
-            this.state.items.map((item, index) => (
-              <FooterLink { ...item } key={ index } />
-            ))
-          }
+      <footer className="Footer">
+        <ul className="Footer-social-list">
+          { items }
         </ul>
       </footer>
     );
-  }
-
-
-  componentDidMount() {
-    fetch(`${ process.env.PUBLIC_URL }/social-links.json`)
-      .then(FetchHelper.status)
-      .then(FetchHelper.parseJSON)
-      .then((data) => {
-        this.setState({ items: data });
-      })
-      .catch((e) => {
-        console.warn(e);
-      });
   }
 }

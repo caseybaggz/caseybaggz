@@ -1,11 +1,19 @@
-import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import React, { Component, PropTypes } from 'react';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import githubIco from '../../images/ico/github.svg';
 import codepenIco from '../../images/ico/codepen.svg';
 import twitterIco from '../../images/ico/twitter.svg';
 import linkedinIco from '../../images/ico/linkedin.svg';
 import './FooterLink.css';
 
+const propTypes = {
+  name: PropTypes.string,
+  url: PropTypes.string.isRequired
+};
+
+const defaultProps = {
+  url: '#'
+};
 
 const itemBg = StyleSheet.create({
   github: {
@@ -33,9 +41,13 @@ export default class FooterLink extends Component {
     };
 
     return (
-      <li className={ 'footer-item ' + css(itemBg[this.props.name]) } style={ itemStyle }>
-        <a href={ this.props.url } className="link" target="_blank" />
+      <li className={ 'FooterLink ' + css(itemBg[this.props.name]) } style={ itemStyle }>
+        <a href={ this.props.url } className="FooterLink-link" target="_blank" />
       </li>
     );
   }
 }
+
+
+FooterLink.propTypes = propTypes;
+FooterLink.defaultProps = defaultProps;

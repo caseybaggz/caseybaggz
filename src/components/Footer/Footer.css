@@ -1,8 +1,8 @@
-.footer-container {
+.Footer {
   padding: 1em 0;
 }
 
-.footer-container .social-list {
+.Footer-social-list {
   align-items: center;
   display: flex;
   justify-content: center;

@@ -4,6 +4,14 @@ import './IndexView.css';
 
 
 export default class IndexView extends Component {
+  componentDidMount() {
+    const container = document.querySelector('.index-view-container');
+
+    window.setTimeout(() => {
+      container.classList.add('fadeIn');
+    }, 1000);
+  }
+
   render() {
     return (
       <div className="index-view-container animated">
@@ -20,14 +28,5 @@ export default class IndexView extends Component {
         </div>
       </div>
     );
-  }
-
-
-  componentDidMount() {
-    const container = document.querySelector('.index-view-container');
-
-    window.setTimeout(() => {
-      container.classList.add('fadeIn');
-    }, 1000);
   }
 }

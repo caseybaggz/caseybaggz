@@ -1,4 +1,4 @@
-.footer-item {
+.FooterLink {
   background-color: #202020;
   border-radius: 50%;
   display: flex;
@@ -6,10 +6,17 @@
   justify-content: center;
   margin: 0 0.5em;
   overflow: hidden;
+  transform: scale(1);
+  transition: transform 200ms ease-out;
   width: 3.75em;
+  will-change: transform;
 }
 
-.footer-item .link {
+.FooterLink:hover {
+  transform: scale(1.1);
+}
+
+.FooterLink-link {
   display: inline-block;
   height: 100%;
   width: 100%;

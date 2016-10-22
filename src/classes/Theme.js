@@ -16,6 +16,8 @@ export const Theme = {
 };
 
 // extended
-
 Theme.whiteText = Theme.white;
 Theme.darkText = Theme.primaryDark;
+
+
+export default Theme;
