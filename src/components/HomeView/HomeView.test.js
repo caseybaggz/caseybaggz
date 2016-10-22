@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { StyleSheetTestUtils } from 'aphrodite';
+import { mount } from 'enzyme';
 import TestUtils from 'react-addons-test-utils';
 import HomeView from './';
 
@@ -23,10 +24,8 @@ describe('HomeView Component', () => {
 
 
   it('should have a headline title', () => {
-    const page = TestUtils.renderIntoDocument(<HomeView />);
-    const headline = TestUtils.findRenderedDOMComponentWithClass(page, 'sub-headline');
-
-    expect(ReactDOM.findDOMNode(headline).textContent).toBe('React & RailsCreative Developer');
+    const wrapper = mount(<HomeView />);
+    expect(wrapper.find('.HomeView-sub-headline').text()).toEqual('FE-Engineer & Speaker');
   });
 
 
@@ -50,7 +49,7 @@ describe('HomeView Component', () => {
     const page = TestUtils.renderIntoDocument(<HomeView />);
     const footer = TestUtils.findRenderedDOMComponentWithTag(page, 'footer');
 
-    expect(ReactDOM.findDOMNode(footer).className).toBe('footer-container');
+    expect(ReactDOM.findDOMNode(footer).className).toBe('Footer');
   });
 
 });

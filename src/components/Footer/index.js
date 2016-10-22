@@ -7,22 +7,28 @@ import './Footer.css';
 export default class Footer extends Component {
   constructor() {
     super();
+    this.items = SocialLinks;
 
-    this.state = {
-      items: SocialLinks
-    };
+    // cache methods
+    this._getItems = this._getItems.bind(this);
+  }
+
+  // PRIVATE
+
+  _getItems() {
+    return this.items.map((item, index) => (
+      <FooterLink { ...item } key={ index } />
+    ));
   }
 
 
   render() {
+    const items = this._getItems();
+
     return (
       <footer className="Footer">
         <ul className="Footer-social-list">
-          {
-            this.state.items.map((item, index) => (
-              <FooterLink { ...item } key={ index } />
-            ))
-          }
+          { items }
         </ul>
       </footer>
     );
