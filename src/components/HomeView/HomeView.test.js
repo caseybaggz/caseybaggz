@@ -16,18 +16,18 @@ describe('HomeView Component', () => {
     StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
   });
 
-
   it('should render without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<HomeView />, div);
   });
 
-
   it('should have a headline title', () => {
     const wrapper = mount(<HomeView />);
+    expect(wrapper.find('.HomeView-sub-headline')).not.toBeNull();
+    expect(wrapper.find('.HomeView-sub-headline')).toBeDefined();
     expect(wrapper.find('.HomeView-sub-headline').text()).toEqual('FE-Engineer & Speaker');
+    expect(wrapper.find('.HomeView-sub-headline').text()).not.toEqual('');
   });
-
 
   it('should have a MailBtn component', () => {
     const page = TestUtils.renderIntoDocument(<HomeView />);
@@ -43,7 +43,6 @@ describe('HomeView Component', () => {
     // make sure link goes to home view
     expect(window.location.href).toBe('about:blank');
   });
-
 
   it('should have a Footer component', () => {
     const page = TestUtils.renderIntoDocument(<HomeView />);
