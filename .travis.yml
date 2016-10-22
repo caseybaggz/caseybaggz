@@ -7,6 +7,7 @@ cache:
   - node_modules
 
 before_install:
+  - yarn
   - yarn install codecov.io coveralls
 
 after_success:
