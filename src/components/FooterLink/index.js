@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import githubIco from '../../images/ico/github.svg';
 import codepenIco from '../../images/ico/codepen.svg';
@@ -6,6 +6,14 @@ import twitterIco from '../../images/ico/twitter.svg';
 import linkedinIco from '../../images/ico/linkedin.svg';
 import './FooterLink.css';
 
+const propTypes = {
+  name: PropTypes.string,
+  url: PropTypes.string.isRequired
+};
+
+const defaultProps = {
+  url: '#'
+};
 
 const itemBg = StyleSheet.create({
   github: {
@@ -39,3 +47,7 @@ export default class FooterLink extends Component {
     );
   }
 }
+
+
+FooterLink.propTypes = propTypes;
+FooterLink.defaultProps = defaultProps;
