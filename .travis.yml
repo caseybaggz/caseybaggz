@@ -7,14 +7,14 @@ cache:
   - node_modules
 
 before_install:
-  - npm install codecov.io coveralls
+  - yarn install codecov.io coveralls
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
   - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 
 script:
-  - npm test -- --coverage
+  - yarn test -- --coverage
 
 notifications:
   webhooks: https://coveralls.io/webhook?repo_token=1BXJrX0DTLvcULsgbPMRfIS6hb1C50Wpm
