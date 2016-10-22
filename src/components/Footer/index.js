@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FooterLink from '../FooterLink';
-import FetchHelper from '../../classes/FetchHelper';
+import SocialLinks from './social-links.json';
 import './Footer.css';
 
 
@@ -9,15 +9,15 @@ export default class Footer extends Component {
     super();
 
     this.state = {
-      items: []
+      items: SocialLinks
     };
   }
 
 
   render() {
     return (
-      <footer className="footer-container">
-        <ul className="social-list">
+      <footer className="Footer">
+        <ul className="Footer-social-list">
           {
             this.state.items.map((item, index) => (
               <FooterLink { ...item } key={ index } />
@@ -26,18 +26,5 @@ export default class Footer extends Component {
         </ul>
       </footer>
     );
-  }
-
-
-  componentDidMount() {
-    fetch(`${ process.env.PUBLIC_URL }/social-links.json`)
-      .then(FetchHelper.status)
-      .then(FetchHelper.parseJSON)
-      .then((data) => {
-        this.setState({ items: data });
-      })
-      .catch((e) => {
-        console.warn(e);
-      });
   }
 }

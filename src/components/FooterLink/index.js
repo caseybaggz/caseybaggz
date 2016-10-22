@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import githubIco from '../../images/ico/github.svg';
 import codepenIco from '../../images/ico/codepen.svg';
 import twitterIco from '../../images/ico/twitter.svg';
@@ -33,8 +33,8 @@ export default class FooterLink extends Component {
     };
 
     return (
-      <li className={ 'footer-item ' + css(itemBg[this.props.name]) } style={ itemStyle }>
-        <a href={ this.props.url } className="link" target="_blank" />
+      <li className={ 'FooterLink ' + css(itemBg[this.props.name]) } style={ itemStyle }>
+        <a href={ this.props.url } className="FooterLink-link" target="_blank" />
       </li>
     );
   }
