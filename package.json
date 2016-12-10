@@ -8,7 +8,7 @@
     "coveralls": "^2.11.14",
     "enzyme": "^2.4.1",
     "react-addons-test-utils": "^0.14.0",
-    "react-scripts": "0.7.0"
+    "react-scripts": "0.8.3"
   },
   "dependencies": {
     "animate.css": "^3.5.2",
