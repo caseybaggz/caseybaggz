@@ -18,12 +18,6 @@ describe('IndexView Component', () => {
 
     expect(ReactDOM.findDOMNode(button).href).toBe('https://medium.com/@caseybaggz');
     expect(ReactDOM.findDOMNode(button).textContent).toBe('');
-
-    // similate click
-    TestUtils.Simulate.click(button);
-
-    // make sure link goes to new tab
-    expect(window.location.href).toBe('about:blank');
   });
 
 
