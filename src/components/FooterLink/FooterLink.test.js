@@ -15,6 +15,7 @@ describe('FooterLink component', () => {
     StyleSheetTestUtils.clearBufferAndResumeStyleInjection();
   });
 
+
   it('should render without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<FooterLink url={ 'test.com' } />, div);
