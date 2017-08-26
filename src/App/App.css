@@ -1,9 +1,13 @@
 .App-feature {
+  margin: 0 auto;
+  max-width: 48.0625rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
 }
 
 .App-logo-wrapper {
+  margin: 0 auto;
+  max-width: 30.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -35,4 +39,14 @@
 
 .App-inline-link:hover {
   color: #f39121;
+}
+
+
+/*===========================================
+                BREAKPOINTS
+===========================================*/
+@media only screen and (min-width: 768px) {
+  .App-copy {
+    line-height: 1.8;
+  }
 }

@@ -21,7 +21,7 @@
   color: #feffee;
 }
 
-:focus {
+:focus:not(a) {
   background-color: transparent;
   outline: none;
 }
