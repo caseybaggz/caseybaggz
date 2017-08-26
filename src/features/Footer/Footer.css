@@ -1,0 +1,37 @@
+.Footer {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.Footer-ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  width: 100%;
+}
+
+.Footer-li {
+  display: inline-block;
+  height: 3.125rem;
+  margin-left: 1rem;
+  width: 3.125rem;
+}
+
+.Footer-li:first-of-type {
+  margin-left: 0;
+}
+
+.Footer-link {
+  background-color: #556574;
+  border-radius: 50%;
+  display: inline-block;
+  height: 100%;
+  padding: 0.7rem;
+  transition: background-color 150ms ease-out;
+  width: 100%;
+}
+
+.Footer-link:hover {
+  background-color: #202020;
+}
