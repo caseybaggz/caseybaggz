@@ -1,9 +1,10 @@
-import 'normalize.css';
-import 'animate.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Raven from 'raven-js';
-import App from './components/App';
+
+import App from './App';
+
+import 'normalize.css';
 import './index.css';
 
 // sentry config
