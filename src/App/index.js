@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import {
   Image,
-  Navbar
+  Navbar,
+  Footer
 } from 'features';
 
 import {
@@ -14,6 +15,10 @@ import './App.css';
 
 
 export default class App extends Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+
   render() {
     return(
       <div className="App">
@@ -105,6 +110,10 @@ export default class App extends Component {
             material that I've come up with recently.
           </p>
         </div>
+
+        <footer className="App-footer">
+          <Footer />
+        </footer>
       </div>
     );
   }
