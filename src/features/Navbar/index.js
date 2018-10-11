@@ -2,40 +2,41 @@ import React, { Component } from 'react';
 
 import './Navbar.css';
 
-
 export default class Navbar extends Component {
   constructor() {
     super();
     this.links = [
       { id: 0, text: 'posts', url: 'https://medium.com/@caseybaggz' },
-      { id: 1, text: 'speaking', url: 'https://medium.com/@caseybaggz/post-squares-conf-2016-5ecac18387c' }
+      {
+        id: 1,
+        text: 'speaking',
+        url: 'https://medium.com/@caseybaggz/post-squares-conf-2016-5ecac18387c'
+      }
     ];
   }
 
   getNavItems = () => {
     return this.links.map((link, eq) => (
-      <li
-        className="Navbar-li"
-        key={link.id}
-      >
+      <li className="Navbar-li" key={link.id}>
         <a
           className="Navbar-link"
           href={link.url}
           target="_blank"
+          rel="noopener noreferrer"
         >
           {link.text}
         </a>
       </li>
     ));
-  }
+  };
 
   render() {
     const navItems = this.getNavItems();
 
-    return(
+    return (
       <div className="Navbar">
         <ul className="Navbar-ul">
-          { navItems }
+          {navItems}
 
           <li className="Navbar-li">
             <a

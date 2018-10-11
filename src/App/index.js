@@ -1,18 +1,12 @@
+// @flow
+
 import React, { Component } from 'react';
 
-import {
-  Image,
-  Navbar,
-  Footer
-} from 'features';
+import { Image, Navbar, Footer } from 'features';
 
-import {
-  Logo
-} from 'images';
+import { Logo } from 'images';
 
 import './App.css';
-
-
 
 export default class App extends Component {
   shouldComponentUpdate() {
@@ -20,7 +14,7 @@ export default class App extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="App">
         <header className="App-header">
           <Navbar />
@@ -28,15 +22,10 @@ export default class App extends Component {
 
         <div className="App-feature">
           <h3 className="App-logo-wrapper">
-            <Image
-              alt="logo"
-              src={Logo}
-            />
+            <Image alt="logo" src={Logo} />
           </h3>
 
-          <h4 className="App-title">
-            mobile app & web developer
-          </h4>
+          <h4 className="App-title">mobile app & web developer</h4>
 
           <p className="App-copy">
             I do what I love and love what I do. For me, that is creating
@@ -53,7 +42,7 @@ export default class App extends Component {
           </p>
           <p className="App-copy">
             I have since had the priveledge of building everything from a
-             SmartWatch app for the
+            SmartWatch app for the
             <a
               className="App-inline-link"
               href="http://travel.tripcase.com/"
@@ -61,7 +50,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               Sabre TripCase team
-            </a>, to creating responsive sites for both Lay's
+            </a>
+            , to creating responsive sites for both Lay's
             <a
               className="App-inline-link"
               href="http://www.snackandbakery.com/articles/89070-lays-passport-to-flavor-potato-chips"
@@ -69,7 +59,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               Passport to Flavor
-            </a>, and
+            </a>
+            , and
             <a
               className="App-inline-link"
               href="https://www.facebook.com/lays/videos/10153834919623058/"
@@ -77,7 +68,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               Flavor Swap
-            </a> campaigns, building out 4 mobile games in the LifeChurch
+            </a>{' '}
+            campaigns, building out 4 mobile games in the LifeChurch
             <a
               className="App-inline-link"
               href="https://www.bible.com/kids"
@@ -85,8 +77,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               Bible App for Kids
-            </a>, to helping Whiplash Merch rebuild their product into a
-            successful
+            </a>
+            , to helping Whiplash Merch rebuild their product into a successful
             <a
               className="App-inline-link"
               href="https://app.getwhiplash.com/login"
@@ -94,7 +86,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               Progressive web React app
-            </a> accompanied by thier own
+            </a>{' '}
+            accompanied by thier own
             <a
               className="App-inline-link"
               href="https://www.npmjs.com/package/whiplash-ui-library"
@@ -102,7 +95,8 @@ export default class App extends Component {
               rel="noopener noreferrer"
             >
               React UI library
-            </a>.
+            </a>
+            .
           </p>
           <p className="App-copy">
             Work never stops and I'm always creating new things with wonderful
