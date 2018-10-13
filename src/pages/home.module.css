@@ -1,0 +1,6 @@
+body,
+#___gatsby,
+#___gatsby > div {
+  height: 100%;
+  width: 100%;
+}
