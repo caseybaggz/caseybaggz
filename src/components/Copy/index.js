@@ -2,10 +2,7 @@
 
 import React, { Component } from "react";
 
-const cStyle = {
-  color: "white",
-  fontFamily: `'Open Sans', Helvetica, sans-serif`
-};
+import CopyStyles from './copy.module.css';
 
 export default class Copy extends Component<{},{}> {
   shouldComponentUpdate() {
@@ -13,6 +10,6 @@ export default class Copy extends Component<{},{}> {
   }
 
   render() {
-    return <p style={cStyle}>{this.props.children}</p>;
+    return <p className={CopyStyles.copy}>{this.props.children}</p>;
   }
 }

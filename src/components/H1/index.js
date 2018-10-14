@@ -2,10 +2,7 @@
 
 import React, { Component } from "react";
 
-const hStyle = {
-  color: 'white',
-  fontSize: '64px'
-};
+import HStyles from './h1.module.css';
 
 export default class H1 extends Component<{},{}> {
   shouldComponentUpdate() {
@@ -13,6 +10,6 @@ export default class H1 extends Component<{},{}> {
   }
 
   render() {
-    return <h1 style={hStyle}>{this.props.children}</h1>;
+    return <h1 className={HStyles.h1}>{this.props.children}</h1>;
   }
 }
