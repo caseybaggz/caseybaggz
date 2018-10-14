@@ -1,6 +1,7 @@
+html,
 body,
-#___gatsby,
-#___gatsby > div {
+body > div,
+body > div > div {
   height: 100%;
   width: 100%;
 }

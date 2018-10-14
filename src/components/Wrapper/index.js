@@ -1,8 +1,13 @@
 // @flow
 
 import React, { Component } from 'react';
+import wrapperStyles from './wrapper.module.css';
 
-export default class Wrapper extends Component {
+type Props = {
+  bg: string
+};
+
+export default class Wrapper extends Component<Props, {}> {
   static defaultProps = {
     bg: '#fff'
   }
@@ -13,13 +18,11 @@ export default class Wrapper extends Component {
 
   render() {
     const wrapperStyle = {
-      backgroundColor: this.props.bg,
-      height: '100%',
-      width: '100%'
+      backgroundColor: this.props.bg
     };
 
     return(
-      <div style={wrapperStyle}>
+      <div className={wrapperStyles.Wrapper} style={wrapperStyle}>
         {this.props.children}
       </div>
     );

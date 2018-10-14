@@ -7,7 +7,7 @@ const cStyle = {
   fontFamily: `'Open Sans', Helvetica, sans-serif`
 };
 
-export default class Copy extends Component {
+export default class Copy extends Component<{},{}> {
   shouldComponentUpdate() {
     return false;
   }

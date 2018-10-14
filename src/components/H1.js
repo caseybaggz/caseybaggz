@@ -7,7 +7,7 @@ const hStyle = {
   fontSize: '64px'
 };
 
-export default class H1 extends Component {
+export default class H1 extends Component<{},{}> {
   shouldComponentUpdate() {
     return false;
   }

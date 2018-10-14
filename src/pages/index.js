@@ -32,7 +32,7 @@ const home = (
   </Wrapper>
 );
 
-export default class Home extends Component {
+export default class Home extends Component<{},{}> {
   shouldComponentUpdate() {
     return false;
   }
