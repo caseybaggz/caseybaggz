@@ -1,9 +1,0 @@
-.Image {
-  display: inline-block;
-  opacity: 0;
-  width: 100%;
-}
-
-.Image.fadeIn {
-  opacity: 1;
-}
