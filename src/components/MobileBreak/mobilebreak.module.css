@@ -1,0 +1,10 @@
+.break {
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .break {
+    display: none;
+  }
+}

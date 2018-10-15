@@ -1,6 +1,7 @@
 .h1 {
   color: white;
-  font-size: 64px;
+  font-size: 49px;
+  overflow-wrap: break-word;
 }
 
 @media screen and (min-width: 769px) {

@@ -15,9 +15,21 @@ export default class Layout extends PureComponent<Props, {}> {
     route: '/'
   }
 
+  getBgColor = (): string => {
+    switch (this.props.route) {
+      case '/colorblind':
+        return "#2196F3";
+
+      default:
+        return "#7c4dff";
+    }
+  }
+
   render() {
+    const bg = this.getBgColor();
+
     return(
-      <Wrapper bg="#7c4dff">
+      <Wrapper bg={bg}>
         <Navbar />
 
         {this.props.children}
