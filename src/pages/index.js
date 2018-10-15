@@ -3,15 +3,12 @@
 import React, {Component} from "react";
 import Copy from "../components/Copy";
 import H1 from "../components/H1";
-import Navbar from "../components/Navbar";
-import Wrapper from '../components/Wrapper';
+import Layout from '../components/Layout';
 
-import './home.module.css';
+import './global.module.css';
 
 const home = (
-  <Wrapper bg="#7c4dff">
-    <Navbar />
-
+  <Layout>
     <H1>Casey Baggz</H1>
     <Copy>
       Hello! Welcome to my home. I've been everything from a designer to
@@ -29,7 +26,7 @@ const home = (
       I hope you can find what you need here and that we may have the
       opportunity to work with one another in the future.
     </Copy>
-  </Wrapper>
+  </Layout>
 );
 
 export default class Home extends Component<{},{}> {
