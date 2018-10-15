@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react';
 import Wrapper from './Wrapper';
 import Navbar from './Navbar';
+import Footer from "./Footer";
 
 type Props = {
   children: Array<Object>,
@@ -33,6 +34,8 @@ export default class Layout extends PureComponent<Props, {}> {
         <Navbar />
 
         {this.props.children}
+
+        <Footer />
       </Wrapper>
     );
   }

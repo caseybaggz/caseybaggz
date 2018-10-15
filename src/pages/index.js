@@ -11,11 +11,11 @@ const home = (
   <Layout>
     <H1>Casey Baggz</H1>
     <Copy>
-      Hello! Welcome to my home. I've been everything from a designer to
+      Hello and welcome to my home. I've been everything from a designer to
       currently full-stack JS developer for the last 8 years building products
       for small business' all the way up to big names like Lays, Brinker, and
       Sabre. I'm currently the director of product and lead front-end developer
-      for Pattyrn.
+      for Pattyrn (coming soon).
     </Copy>
     <Copy>
       When I'm not building amazing products that help make people's life
