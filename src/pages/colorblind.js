@@ -5,11 +5,14 @@ import Copy from "../components/Copy";
 import H1 from "../components/H1";
 import Layout from "../components/Layout";
 import BlockA from "../components/BlockA";
+import HelmetMeta from "../components/HelmetMeta";
 
 import "./global.module.css";
 
 const cb = (
   <Layout route="/colorblind">
+    <HelmetMeta title="Casey Baggz | Colorblind Consultant" />
+
     <H1>Build Colorblind Accessible Products</H1>
     <Copy>
       For the longest time, our culture has been un-educated on the topic of

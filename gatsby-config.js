@@ -12,8 +12,14 @@ module.exports = {
         background_color: "#00BCD4",
         theme_color: "#00BCD4",
         display: "minimal-ui",
-        icon: "src/images/icon.png" // This path is relative to the root of the site.
+        icon: "src/images/manifest/touch-icon-retina.png" // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: `gatsby-plugin-offline`
+    },
+    {
+      resolve: `gatsby-plugin-react-helmet`
     },
     {
       resolve: `gatsby-plugin-typography`,

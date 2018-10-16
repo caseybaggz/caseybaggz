@@ -4,11 +4,14 @@ import React, {Component} from "react";
 import Copy from "../components/Copy";
 import H1 from "../components/H1";
 import Layout from '../components/Layout';
+import HelmetMeta from '../components/HelmetMeta';
 
 import './global.module.css';
 
 const home = (
   <Layout>
+    <HelmetMeta />
+
     <H1>Casey Baggz</H1>
     <Copy>
       Hello and welcome to my home. I've been everything from a designer to
