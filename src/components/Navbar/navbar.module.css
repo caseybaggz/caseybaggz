@@ -1,0 +1,26 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-bottom: 48px;
+  padding-top: 24px;
+  width: 100%;
+}
+
+.ul {
+  list-style: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.li {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.link {
+  color: white;
+  font-family: 'Open-Sans', Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
