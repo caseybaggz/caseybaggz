@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/caseybaggz",
   plugins: [
     {
       resolve: `gatsby-plugin-flow`
