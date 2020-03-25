@@ -1,42 +1,17 @@
 // @flow
 
-import React, { PureComponent } from 'react';
-import Wrapper from './Wrapper';
-import Navbar from './Navbar';
-import Footer from "./Footer";
+import React from 'react';
 
 type Props = {
-  children: Array<Object>,
-  route: string
+  children: Array<Object>
 };
 
-export default class Layout extends PureComponent<Props, {}> {
-  static defaultProps = {
-    children: [],
-    route: '/'
-  }
-
-  getBgColor = (): string => {
-    switch (this.props.route) {
-      case '/colorblind':
-        return "#2196F3";
-
-      default:
-        return "#7c4dff";
-    }
-  }
-
-  render() {
-    const bg = this.getBgColor();
-
-    return(
-      <Wrapper bg={bg}>
-        <Navbar />
-
-        {this.props.children}
-
-        <Footer />
-      </Wrapper>
-    );
-  }
+function Layout(props: Props): React$Node {
+  return (
+    <div>
+      {props.children}
+    </div>
+  );
 }
+
+export default React.memo(Layout);
