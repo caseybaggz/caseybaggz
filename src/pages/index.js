@@ -9,6 +9,8 @@ import './global.module.css';
 const home = (
   <Layout>
     <HelmetMeta />
+
+    test
   </Layout>
 );
 
