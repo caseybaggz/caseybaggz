@@ -3,19 +3,19 @@ import Typography from "typography";
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.5,
-  bodyFontFamily: ["Open Sans", "Helvetica", "Arial", "sans-seif"],
-  fontFamily: '"Poppins", Helvetica, Arial, sans-serif',
+  bodyFontFamily: ["Roboto Mono", "Helvetica", "Arial", "sans-seif"],
+  fontFamily: '"Nunito", Helvetica, Arial, sans-serif',
   googleFonts: [
     {
-      name: "Poppins",
+      name: "Nunito",
       styles: ["600"]
     },
     {
-      name: "Open Sans",
+      name: "Roboto Mono",
       styles: ["400"]
     }
   ],
-  headerFontFamily: ["Poppins", "Helvetica", "Arial", "sans-serif"]
+  headerFontFamily: ["Nunito", "Helvetica", "Arial", "sans-serif"]
 });
 
 export default typography;
