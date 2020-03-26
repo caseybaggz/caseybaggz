@@ -10,6 +10,7 @@ import InfoSection from '../components/layout/InfoSection';
 import Layout from '../components/layout/Layout';
 import Row from '../components/layout/Row';
 import Headline from '../components/typography/Headline';
+import SubHeadline from '../components/typography/SubHeadline';
 import Caption from '../components/typography/Caption';
 import Copy from '../components/typography/Copy';
 import MapPin from '../components/icons/MapPin';
@@ -30,7 +31,7 @@ const HeadlineWrapper = styled.div`
   z-index: 1;
 `;
 
-const SubHeadline = styled(Copy)`
+const PhotoText = styled(Copy)`
   bottom: 54px;
   font-size: 13px;
   padding-left: 34px;
@@ -50,6 +51,16 @@ const CaptionRow = styled(Row)`
 
 const ImageWrapper = styled.figure`
   padding: 18px;
+`;
+
+const NutshellSection = styled.div`
+  padding-right: 47px;
+  margin-left: 47px;
+`;
+
+const NutshellItem = styled(Copy)`
+  color: ${props => props.theme.blackAt70};
+  padding-top: 4px;
 `;
 
 type Props = {};
@@ -80,9 +91,9 @@ function Home(props: Props): React$Node {
           </Headline>
         </HeadlineWrapper>
 
-        <SubHeadline color="lightText">
+        <PhotoText color="lightText">
           Lead Frontend Dev / Technical Product Owner
-        </SubHeadline>
+        </PhotoText>
 
         <ImageWrapper>
           <Img
@@ -110,6 +121,24 @@ function Home(props: Props): React$Node {
         I also love to learn about house plants.
         <Emoji label="plant" symbol="🌿" size="14px" />
       </InfoSection>
+
+      <NutshellSection>
+        <SubHeadline>Me in a Nutshell</SubHeadline>
+        <NutshellItem>
+          <Emoji label="up" symbol="⬆️" size="14px" />
+          <Emoji label="sun" symbol="☀️" size="14px" />
+          <Emoji label="moon" symbol="🌕" size="14px" />
+          Sagittarius, optimistic and blunt
+        </NutshellItem>
+        <NutshellItem>
+          <Emoji label="dice" symbol="🎲" size="14px" />
+          DnD campaign for over 1yr
+        </NutshellItem>
+        <NutshellItem>
+          <Emoji label="horse" symbol="🐴" size="14px" />
+          Animal lover - vegan
+        </NutshellItem>
+      </NutshellSection>
     </Layout>
   );
 }
