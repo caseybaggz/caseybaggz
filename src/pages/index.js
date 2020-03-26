@@ -4,6 +4,7 @@ import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Emoji from '../components/Emoji';
 import HelmetMeta from '../components/layout/HelmetMeta';
 import InfoSection from '../components/layout/InfoSection';
 import Layout from '../components/layout/Layout';
@@ -107,6 +108,7 @@ function Home(props: Props): React$Node {
         <br />
         <br />
         I also love to learn about house plants.
+        <Emoji label="plant" symbol="🌿" size="14px" />
       </InfoSection>
     </Layout>
   );
