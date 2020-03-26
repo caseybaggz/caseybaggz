@@ -2,9 +2,14 @@
 
 import React from "react";
 import { useStaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Layout from '../components/layout/Layout';
 import HelmetMeta from '../components/layout/HelmetMeta';
+
+const ImageWrapper = styled.div`
+  padding: 18px;
+`;
 
 type Props = {};
 
@@ -24,10 +29,12 @@ function Home(props: Props): React$Node {
   return (
     <Layout>
       <HelmetMeta />
-      <Img
-        fluid={data.file.childImageSharp.fluid}
-        alt="casey baggz in norway"
-      />
+      <ImageWrapper>
+        <Img
+          fluid={data.file.childImageSharp.fluid}
+          alt="casey baggz in norway"
+        />
+      </ImageWrapper>
     </Layout>
   );
 }
