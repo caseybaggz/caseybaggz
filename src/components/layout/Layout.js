@@ -77,6 +77,7 @@ function Layout(props: Props): React$Node {
     <ThemeProvider theme={theme}>
       <Wrapper>
         <GlobalStyle />
+
         {props.children}
       </Wrapper>
     </ThemeProvider>
