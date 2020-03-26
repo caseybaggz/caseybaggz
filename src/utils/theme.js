@@ -20,6 +20,8 @@ const theme: Object = {
   lightText: white,
   captionText: accent,
 
+  blackAt70: 'rgba(22, 10, 6, 0.7)',
+
   bodyFont: 'Nunito, Helvetica, Arial, sans-serif',
   captionFont: 'Roboto Mono, Helvetica, Arial, monospace'
 };

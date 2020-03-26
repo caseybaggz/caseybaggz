@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import HelmetMeta from '../components/layout/HelmetMeta';
+import InfoSection from '../components/layout/InfoSection';
 import Layout from '../components/layout/Layout';
 import Row from '../components/layout/Row';
 import Headline from '../components/typography/Headline';
@@ -93,6 +94,20 @@ function Home(props: Props): React$Node {
           </CaptionRow>
         </ImageWrapper>
       </FeatureWrapper>
+
+      <InfoSection headline="What's the Why?">
+        I’m a passionate software engineer with 8.5 years of experience, skilled
+        in front-end development with an extensive background in user experience
+        and design.
+        <br />
+        <br />
+        When not building products, I love speaking at conferences to help grow
+        and challenge the industry, writing blogs of my latest work, and
+        contributing to open-source projects.
+        <br />
+        <br />
+        I also love to learn about house plants.
+      </InfoSection>
     </Layout>
   );
 }
