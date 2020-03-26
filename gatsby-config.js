@@ -1,5 +1,11 @@
 module.exports = {
   plugins: [
+    `gatsby-plugin-flow`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -21,9 +27,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-flow`
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'GatsbyJS',
@@ -34,15 +37,6 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/manifest/touch-icon-retina.png' // This path is relative to the root of the site.
       }
-    },
-    {
-      resolve: `gatsby-plugin-offline`
-    },
-    {
-      resolve: `gatsby-plugin-react-helmet`
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -65,12 +59,19 @@ module.exports = {
         ]
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/data/`
+        name: `images`,
+        path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+        ignore: [`**/\.*`] // ignore files starting with a dot
       }
     }
   ]
