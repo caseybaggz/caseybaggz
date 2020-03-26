@@ -3,10 +3,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import Avatar from '../images/manifest/avatar.jpg';
-import AndroidFav from '../images/manifest/android-icon.png';
-import AppleFav from '../images/manifest/touch-icon-retina.png';
-import Favicon from '../images/manifest/favicon.png';
+import Avatar from '../../images/manifest/avatar.jpg';
+import AndroidFav from '../../images/manifest/android-icon.png';
+import AppleFav from '../../images/manifest/touch-icon-retina.png';
+import Favicon from '../../images/manifest/favicon.png';
 
 type Props = {
   title: string

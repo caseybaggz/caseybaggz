@@ -1,10 +1,8 @@
 // @flow
 
 import React from "react";
-import Layout from '../components/Layout';
-import HelmetMeta from '../components/HelmetMeta';
-
-import './global.module.css';
+import Layout from '../components/layout/Layout';
+import HelmetMeta from '../components/layout/HelmetMeta';
 
 const home = (
   <Layout>

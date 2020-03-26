@@ -1,8 +1,9 @@
 // @flow
 
 import React from 'react';
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import theme from '../utils/theme';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import theme from '../../utils/theme';
+import media from '../../utils/media';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -50,6 +51,23 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Wrapper = styled.div(
+  props => `
+  background: ${props.theme.white};
+  min-height: 100vh;
+
+  ${media.large} {
+    background: linear-gradient(
+      90deg,
+      ${props.theme.white} 0%,
+      ${props.theme.white} 50%,
+      ${props.theme.black} 50%,
+      ${props.theme.black} 100%
+    );
+  }
+`
+);
+
 type Props = {
   children: Array<Object>
 };
@@ -57,10 +75,10 @@ type Props = {
 function Layout(props: Props): React$Node {
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <Wrapper>
         <GlobalStyle />
         {props.children}
-      </div>
+      </Wrapper>
     </ThemeProvider>
   );
 }
