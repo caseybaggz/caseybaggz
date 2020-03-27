@@ -12,11 +12,13 @@ const Wrapper = styled.div`
   padding-top: 8px;
   margin-left: 47px;
   margin-top: 113px;
+  width: 100%;
 `;
 
 const BodyText = styled(Copy)`
   color: ${props => props.theme.blackAt70};
   line-height: 1.8;
+  max-width: 500px;
   padding-top: 57px;
 `;
 
