@@ -4,6 +4,8 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterButton from '../actions/FooterButton';
 
+// TODO: Convert to data template
+
 const Wrapper = styled.footer`
   padding-bottom: 25px;
   padding-top: 75px;
@@ -12,6 +14,7 @@ const Wrapper = styled.footer`
 const FooterLinks = styled.ul`
   align-items: center;
   display: flex;
+  overflow-x: auto;
   padding-left: 47px;
   width: 100%;
 
@@ -26,6 +29,19 @@ const footerContent: React$Node = (
       <li>
         <FooterButton href="https://twitter.com/caseybaggz">
           twitter
+        </FooterButton>
+      </li>
+      <li>
+        <FooterButton href="https://www.linkedin.com/in/caseybaggz/">
+          linkedIn
+        </FooterButton>
+      </li>
+      <li>
+        <FooterButton href="https://github.com/caseybaggz">gitHub</FooterButton>
+      </li>
+      <li>
+        <FooterButton href="https://dribbble.com/caseybaggz">
+          dribbble
         </FooterButton>
       </li>
     </FooterLinks>
