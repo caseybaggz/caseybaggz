@@ -16,6 +16,7 @@ const Button = styled(Link)(
   padding-right: 21px;
   padding-top: 10px;
   transition: background-color 250ms ease-out;
+  text-align: center;
   width: ${props.width || 'initial'};
 
   &:hover {

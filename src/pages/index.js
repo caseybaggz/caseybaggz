@@ -2,25 +2,19 @@
 
 import React from "react";
 import styled from 'styled-components';
+import FeatureItem from '../components/layout/FeatureItem';
 import HelmetMeta from '../components/layout/HelmetMeta';
 import Layout from '../components/layout/Layout';
 import Illustration from '../components/layout/Illustration';
 import InfoSection from '../components/layout/InfoSection';
+import Button from '../components/actions/Button';
 import ExternalTextLink from '../components/actions/ExternalTextLink';
 import RectangularPattern from '../components/layout/patterns/RectangularPattern';
 import Headline from '../components/typography/Headline';
 import Copy from '../components/typography/Copy';
 import Emoji from '../components/Emoji';
 
-const Feature = styled.div(
-  props => `
-  padding-bottom: 65px;
-  padding-left: ${props.theme.featureSidePad};
-  padding-right: ${props.theme.featureSidePad};
-`
-);
-
-const RealTalkWrapper = styled(Feature)`
+const RealTalkWrapper = styled(FeatureItem)`
   padding-top: 55px;
 `;
 
@@ -32,11 +26,15 @@ const RealListItem = styled.li`
   margin-bottom: 12px;
 `;
 
+const ButtonWrapper = styled(FeatureItem)`
+  padding-bottom: initial;
+`;
+
 const homeContent: React$Node = (
   <Layout>
     <HelmetMeta />
 
-    <Feature>
+    <FeatureItem>
       <Illustration />
       <InfoSection headline="Catchy Title">
         What if product or portfolio sites were unique, refreshing, and not just
@@ -50,7 +48,7 @@ const homeContent: React$Node = (
         Designer, and overall Mastermind behind
         <ExternalTextLink href="https://pattyrn.com/">Pattyrn</ExternalTextLink>
       </InfoSection>
-    </Feature>
+    </FeatureItem>
 
     <RectangularPattern />
 
@@ -85,6 +83,12 @@ const homeContent: React$Node = (
         </RealListItem>
       </RealList>
     </RealTalkWrapper>
+
+    <ButtonWrapper>
+      <Button to="/contact" width="100%">
+        Final Contact Opportunity
+      </Button>
+    </ButtonWrapper>
   </Layout>
 );
 
