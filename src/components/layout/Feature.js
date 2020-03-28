@@ -11,10 +11,9 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: 375px;
-  padding-bottom: 78px;
-  padding-left: 31px;
-  padding-right: 31px;
-  padding-top: 75px;
+  left: 31px;
+  position: fixed;
+  top: 105px;
 `;
 
 const ButtonWrapper = styled.div`

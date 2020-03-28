@@ -1,6 +1,6 @@
 // @flow
 
-const white: string = '#fff';
+const white: string = '#fffffe';
 const black: string = '#1C1714';
 const gray2: string =  '#4f4f4f';
 const green3: string = '#6fcf97';
