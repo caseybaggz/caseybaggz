@@ -6,6 +6,7 @@ import Emoji from '../Emoji';
 import Button from '../actions/Button';
 import SmallHeadline from '../typography/SmallHeadline';
 import Headline from '../typography/Headline';
+import media from '../../utils/media';
 
 const Wrapper = styled.div`
   margin-left: auto;
@@ -14,16 +15,27 @@ const Wrapper = styled.div`
   left: 31px;
   position: fixed;
   top: 105px;
+
+  ${media.medium} {
+    max-width: initial;
+    left: 52px;
+    top: 205px;
+    width: 100%;
+  }
 `;
 
 const ButtonWrapper = styled.div`
   padding-top: 25px;
+
+  ${media.medium} {
+    padding-top: 46px;
+  }
 `;
 
 const featureContent: React$Node = (
   <Wrapper>
-    <SmallHeadline>Hi there!</SmallHeadline>
-    <Headline color="gray6">
+    <SmallHeadline responsive>Hi there!</SmallHeadline>
+    <Headline color="gray6" responsive>
       Headline that
       <br />
       prompts you to do

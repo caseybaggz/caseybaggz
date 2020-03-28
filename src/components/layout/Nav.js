@@ -13,7 +13,8 @@ type LinkType = {
 const linkData: Array<LinkType> = [
   { id: '0', label: 'Home', to: '/' },
   { id: '1', label: 'Werk', to: '/work' },
-  { id: '2', label: 'Blog', to: '/blog' }
+  { id: '2', label: 'Blog', to: '/blog' },
+  { id: '3', label: 'Contact', to: '/contact' }
 ];
 
 const NavList = styled.ul(
