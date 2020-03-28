@@ -1,12 +1,12 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Portfolio Site
+Built with Gatsby in my off hours when I have free time (rare).
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+## Todo
+* Social nav (mobile/desktop)
+* Werk page
+* Contact page
+* Blog page (convert from Medium)
+* Refine Desktop styles
+* Party 🎉
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
-
-## Running in development
-`gatsby develop`
+_All code and designs copyright Casey Baggz 2020_
