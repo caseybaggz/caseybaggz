@@ -5,12 +5,13 @@ import styled from 'styled-components';
 import HelmetMeta from '../components/layout/HelmetMeta';
 import Layout from '../components/layout/Layout';
 
-const Feature = styled.div`
+const Feature = styled.div(
+  props => `
   padding-bottom: 65px;
-  padding-left: 31px;
-  padding-right: 31px;
-  padding-top: 53px;
-`;
+  padding-left: ${props.theme.featureSidePad};
+  padding-right: ${props.theme.featureSidePad};
+`
+);
 
 type Props = {};
 

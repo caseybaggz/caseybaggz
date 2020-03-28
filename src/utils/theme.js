@@ -26,6 +26,10 @@ const theme: Object = {
   darkText: black,
   lightText: white,
   captionText: gray2,
+
+  // layout
+
+  featureSidePad: '31px'
 };
 
 export default theme;
