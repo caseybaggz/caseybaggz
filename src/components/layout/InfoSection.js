@@ -5,21 +5,8 @@ import styled from 'styled-components';
 import Headline from '../typography/Headline';
 import Copy from '../typography/Copy';
 
-const Wrapper = styled.div`
-  border-top: 6px solid ${props => props.theme.black};
-  padding-bottom: 48px;
-  padding-right: 47px;
-  padding-top: 8px;
-  margin-left: 47px;
-  margin-top: 113px;
-  width: 100%;
-`;
-
 const BodyText = styled(Copy)`
-  color: ${props => props.theme.blackAt70};
-  line-height: 1.8;
-  max-width: 500px;
-  padding-top: 57px;
+  padding-top: 24px;
 `;
 
 type Props = {
@@ -29,10 +16,10 @@ type Props = {
 
 function InfoSection(props: Props): React$Node {
   return (
-    <Wrapper>
+    <div>
       <Headline>{props.headline}</Headline>
       <BodyText>{props.children}</BodyText>
-    </Wrapper>
+    </div>
   );
 }
 

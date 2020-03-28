@@ -45,6 +45,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  svg {
+    line-height: 0;
+  }
+
   ::-moz-selection {
     color: ${props => props.theme.darkText};
     background: ${props => props.theme.green3}
