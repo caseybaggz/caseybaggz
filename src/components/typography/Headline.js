@@ -4,8 +4,7 @@ import styled from 'styled-components';
 
 const Headline = styled.h3(
   props => `
-  color: ${props.theme[props.color]};
-  font-family: ${props.theme.bodyFont};
+  color: ${props.theme[props.color] || props.theme.darkText};
   font-size: 32px;
 `
 );

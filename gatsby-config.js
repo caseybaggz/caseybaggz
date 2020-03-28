@@ -49,12 +49,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Nunito`,
-            variants: [`400`]
-          },
-          {
-            family: `Roboto Mono`,
-            variants: [`400`]
+            family: `Work Sans`,
+            variants: [`400`, `600`]
           }
         ]
       }

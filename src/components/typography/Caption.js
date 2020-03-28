@@ -1,11 +1,10 @@
 // @flow
 
-import styled from 'styled-components';
+import Copy from './Copy';
 
-const Caption  = styled.figcaption`
-  color: ${props => props.theme.captionText};
-  font-family: ${props => props.theme.captionFont};
-  font-size: 10px;
+const Caption = styled(Copy)`
+  color: ${props => props.theme.gray2};
+  font-size: 12px;
 `;
 
 export default Caption;

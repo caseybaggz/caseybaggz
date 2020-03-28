@@ -1,29 +1,31 @@
 // @flow
 
-const white: string = '#fff';
-const black: string = '#160A06';
-const accent: string = '#706E6F';
+const white: string = '#fffffe';
+const black: string = '#1C1714';
+const gray2: string =  '#4f4f4f';
+const green3: string = '#6fcf97';
 
 const theme: Object = {
   black,
   white,
 
+  gray1: '#333333',
+  gray2,
+  gray3: '#828282',
+  gray5: '#e0e0e0',
+  gray6: '#f2f2f2',
+
+  green3,
+
   // components
 
-  lightButton: '#F2F2F2',
-  iconColor: '#C0BDBE',
-  border: '#BDBDBD',
+  button: green3,
 
   // Typography
 
   darkText: black,
   lightText: white,
-  captionText: accent,
-
-  blackAt70: 'rgba(22, 10, 6, 0.7)',
-
-  bodyFont: 'Nunito, Helvetica, Arial, sans-serif',
-  captionFont: 'Roboto Mono, Helvetica, Arial, monospace'
+  captionText: gray2,
 };
 
 export default theme;

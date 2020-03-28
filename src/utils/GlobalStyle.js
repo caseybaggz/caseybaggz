@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
     color: ${props => props.theme.darkText};
-    font-family: ${props => props.theme.bodyFont};
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -35,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.white};
+    background-color: ${props => props.theme.black};
   }
 
   ul {
@@ -47,12 +46,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::-moz-selection {
-    color: ${props => props.theme.lightText};
-    background: ${props => props.theme.darkText}
+    color: ${props => props.theme.darkText};
+    background: ${props => props.theme.green3}
   }
   ::selection {
-    color: ${props => props.theme.lightText};
-    background: ${props => props.theme.darkText}
+    color: ${props => props.theme.darkText};
+    background: ${props => props.theme.green3}
   }
 `;
 

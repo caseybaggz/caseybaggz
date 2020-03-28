@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const EmojiSpan = styled.span`
   font-size: ${props => (props.size ? props.size : 'inherit')};
+  margin-left: 7px;
 `;
 
 type Props = {
