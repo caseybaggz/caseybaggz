@@ -45,16 +45,26 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Work Sans`,
-            variants: [`400`, `600`]
-          }
-        ]
+          `Work Sans\:400,600`
+        ],
+        display: 'swap'
       }
     },
+    // Throwing file error :(
+    // {
+    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `Work Sans`,
+    //         variants: [`400`, `600`]
+    //       }
+    //     ]
+    //   }
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
