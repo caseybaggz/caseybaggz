@@ -8,7 +8,6 @@ import theme from '../../utils/theme';
 
 const Wrapper = styled.div(
   props => `
-  background: ${props.theme.white};
   min-height: 100vh;
 `
 );

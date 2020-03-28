@@ -49,7 +49,7 @@ function HelmetMeta(props: Props): React$Node {
 }
 
 HelmetMeta.defaultProps = {
-  title: ' | 🦄'
+  title: '💀 ⬛️'
 };
 
 export default React.memo(HelmetMeta);
