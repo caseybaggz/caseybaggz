@@ -3,13 +3,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const EmojiSpan = styled.span`
-  font-size: ${props => (props.size ? props.size : 'inherit')};
-  margin-left: 7px;
-`;
+const EmojiSpan = styled.span(
+  props => `
+  font-size: ${props.size ? props.size : 'inherit'};
+  margin-left: ${props.noMargin ? 'initial' : '7px'};
+`
+);
 
 type Props = {
   label: string,
+  noMargin?: boolean,
   size: string,
   symbol: string
 };
@@ -21,6 +24,7 @@ function Emoji(props: Props): React.Node {
       role="img"
       aria-label={props.label ? props.label : ''}
       aria-hidden={props.label ? 'false' : 'true'}
+      noMargin={props.noMargin}
       size={props.size}
     >
       {props.symbol}
@@ -29,6 +33,7 @@ function Emoji(props: Props): React.Node {
 }
 
 Emoji.defaultProps = {
+  noMargin: false,
   label: 'party popper',
   size: '16px',
   symbol: '🎉'
