@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import Feature from '../layout/Feature';
 import GlobalStyle from '../../utils/GlobalStyle';
 import theme from '../../utils/theme';
 // import media from '../../utils/media';
@@ -21,6 +22,8 @@ function Layout(props: Props): React$Node {
     <ThemeProvider theme={theme}>
       <Wrapper>
         <GlobalStyle />
+
+        <Feature />
 
         {props.children}
       </Wrapper>

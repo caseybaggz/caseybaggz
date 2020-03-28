@@ -7,8 +7,8 @@ const family: Array<string> = [workFont, 'Helvetica', 'Arial', 'sans-serif'];
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.4,
   bodyFontFamily: family,
+  bodyLineHeight: 1.5,
   fontFamily: 'workFont, Helvetica, Arial, sans-serif',
   googleFonts: [
     {
