@@ -1,21 +1,22 @@
+// @flow
+
 import Typography from "typography";
+
+const workFont: string = 'Work Sans';
+const family: Array<string> = [workFont, 'Helvetica', 'Arial', 'sans-serif'];
 
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.5,
-  bodyFontFamily: ["Roboto Mono", "Helvetica", "Arial", "sans-seif"],
-  fontFamily: '"Nunito", Helvetica, Arial, sans-serif',
+  baseLineHeight: 1.4,
+  bodyFontFamily: family,
+  fontFamily: 'workFont, Helvetica, Arial, sans-serif',
   googleFonts: [
     {
-      name: "Nunito",
-      styles: ["600"]
-    },
-    {
-      name: "Roboto Mono",
-      styles: ["400"]
+      name: workFont,
+      styles: ["400", "600"]
     }
   ],
-  headerFontFamily: ["Nunito", "Helvetica", "Arial", "sans-serif"]
+  headerFontFamily: family
 });
 
 export default typography;

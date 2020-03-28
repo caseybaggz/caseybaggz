@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
   menu, nav, output, ruby, section, summary,
   time, mark, audio, video {
     color: ${props => props.theme.darkText};
-    font-family: ${props => props.theme.bodyFont};
     font-size: 100%;
     margin: 0;
     padding: 0;
