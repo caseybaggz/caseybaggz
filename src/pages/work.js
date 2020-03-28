@@ -1,18 +1,12 @@
 // @flow
 
 import React from 'react';
-import HelmetMeta from '../components/layout/HelmetMeta';
-import Layout from '../components/layout/Layout';
+import ComingSoon from '../components/layout/ComingSoon';
 
 type Props = {};
 
 function Work(props: Props): React$Node {
-  return (
-    <Layout>
-      <HelmetMeta />
-      Hang tight! It's coming soon!
-    </Layout>
-  );
+  return <ComingSoon />;
 }
 
 export default React.memo(Work);
