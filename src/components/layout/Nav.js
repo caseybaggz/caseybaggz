@@ -24,11 +24,13 @@ const NavList = styled.ul(
   padding-bottom: 60px;
   padding-left: ${props.theme.featureSidePad};
   padding-right: ${props.theme.featureSidePad};
+  width: 100%;
 `
 );
 
 const NavItem = styled.li`
   margin-right: 35px;
+  width: calc(100% / 4);
 
   &:last-of-type {
     margin-right: initial;
@@ -48,7 +50,7 @@ const animateIn = keyframes`
 const LinkItem = styled(Link)`
   color: ${props => props.theme.darkText};
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   padding-bottom: 10px;
   position: relative;
