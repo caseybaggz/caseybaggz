@@ -40,13 +40,14 @@ const ButtonWrapper = styled.div`
 `;
 
 type Props = {
+  showSocial: boolean,
   onClick: () => {}
 };
 
 function Feature(props: Props): React$Node {
   return (
     <Wrapper>
-      <Navicon onClick={props.onClick} />
+      <Navicon show={props.showSocial} onClick={props.onClick} />
 
       <SmallHeadline responsive>Hi there!</SmallHeadline>
       <Headline color="gray6" responsive>
@@ -66,6 +67,7 @@ function Feature(props: Props): React$Node {
 }
 
 Feature.defaultProps = {
+  showSocial: false,
   onClick: () => {}
 };
 

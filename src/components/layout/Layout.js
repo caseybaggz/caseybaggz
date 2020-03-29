@@ -65,7 +65,7 @@ function Layout(props: Props): React$Node {
             transform: xPos.interpolate(x => `translate3d(${x}%, 0, 0)`)
           }}
         >
-          <Feature onClick={handleToggleSocial} />
+          <Feature showSocial={showSocial} onClick={handleToggleSocial} />
           <Content>
             <Nav />
 
