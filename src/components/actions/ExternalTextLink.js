@@ -8,7 +8,7 @@ const LinkItem = styled.a`
   display: inline-block;
   margin-left: 5px;
   text-decoration: underline;
-  transition: color 250ms ease-out
+  transition: color 250ms ease-out;
 
   &:hover {
     color: ${props => props.theme.button};
@@ -28,7 +28,7 @@ type Props = {
 
 function ExternalTextLink(props: Props): React$Node {
   return (
-    <LinkItem href={props.href} target="_blank" rel="noopener noreferrer">
+    <LinkItem className="external-link" href={props.href} target="_blank" rel="noopener noreferrer">
       {props.children}
       <IconWrapper>
         <LaunchIcon />

@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   ${media.medium} {
     max-width: initial;
     left: 52px;
-    top: 205px;
+    top: 90px;
     width: 100%;
   }
 `;

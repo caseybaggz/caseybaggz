@@ -19,6 +19,19 @@ const Wrapper = styled.div`
   top: 0;
   width: 100%;
   z-index: 0;
+
+  ${media.medium} {
+    bottom: initial;
+    background-color: transparent;
+    height: initial;
+    left: 55px;
+    padding-top: initial;
+    position: absolute;
+    right: initial;
+    top: 625px;
+    width: auto;
+    z-index: 1;
+  }
 `;
 
 const Title = styled(Headline)`
@@ -29,10 +42,27 @@ const Title = styled(Headline)`
 
 const List = styled.ul`
   padding-top: 45px;
+
+  ${media.medium} {
+    align-items: center;
+    display: flex;
+  }
 `;
 
 const ListItem = styled.li`
   margin-bottom: 45px;
+
+  ${media.medium} {
+    margin-right: 45px;
+
+    .external-link {
+      color: ${props => props.theme.gray4};
+
+      &:hover {
+        color: ${props => props.theme.button};
+      }
+    }
+  }
 `;
 
 type Props = {};

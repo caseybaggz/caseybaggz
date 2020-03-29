@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { animated, interpolate, useSpring } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
 import Disclaimer from '../layout/Disclaimer';
 import Feature from '../layout/Feature';
 import Nav from '../layout/Nav';
@@ -13,6 +13,10 @@ import media from '../../utils/media';
 
 const MainWrapper = styled.div`
   overflow-x: hidden;
+
+  ${media.medium} {
+    overflow-x: initial;
+  }
 `;
 
 const Wrapper = styled(animated.div)`
@@ -66,11 +70,10 @@ function Layout(props: Props): React$Node {
           }}
         >
           <Feature showSocial={showSocial} onClick={handleToggleSocial} />
+
           <Content>
             <Nav />
-
             {props.children}
-
             <Disclaimer />
           </Content>
         </Wrapper>

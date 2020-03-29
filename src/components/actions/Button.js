@@ -14,12 +14,13 @@ const Button = styled(Link)(
   padding-left: 21px;
   padding-right: 21px;
   padding-top: 10.5px;
-  transition: background-color 250ms ease-out;
+  transition: background-color 250ms ease-out, color 250ms ease-out;
   text-align: center;
   width: ${props.width || 'initial'};
 
   &:hover {
-    background-color: ${props.theme.gray6};
+    color: ${props.theme.button};
+    background-color: ${props.theme.black};
   }
 `
 );
