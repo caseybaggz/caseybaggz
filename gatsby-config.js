@@ -6,6 +6,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -47,9 +48,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Work Sans\:400,600`
-        ],
+        fonts: [`Work Sans\:400,600`],
         display: 'swap'
       }
     },
