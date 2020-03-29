@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { animated, interpolate, useSpring } from 'react-spring';
 import Disclaimer from '../layout/Disclaimer';
 import Feature from '../layout/Feature';
 import Nav from '../layout/Nav';
@@ -10,10 +11,13 @@ import GlobalStyle from '../../utils/GlobalStyle';
 import theme from '../../utils/theme';
 import media from '../../utils/media';
 
-const Wrapper = styled.div`
+const MainWrapper = styled.div`
+  overflow-x: hidden;
+`;
+
+const Wrapper = styled(animated.div)`
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
   z-index: 1;
 `;
 
@@ -39,6 +43,11 @@ type Props = {
 
 function Layout(props: Props): React$Node {
   const [showSocial, setShowSocial] = React.useState(() => false);
+  const { bRad, position, xPos } = useSpring({
+    bRad: showSocial ? '40px' : '0px',
+    position: showSocial ? 'fixed' : 'relative',
+    xPos: showSocial ? 60 : 0
+  });
 
   function handleToggleSocial() {
     return setShowSocial(prevState => !prevState);
@@ -46,19 +55,28 @@ function Layout(props: Props): React$Node {
 
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper showSocial={showSocial}>
-        <GlobalStyle />
-        <Feature onClick={handleToggleSocial} />
-        <Content>
-          <Nav />
+      <GlobalStyle />
 
-          {props.children}
+      <MainWrapper>
+        <Wrapper
+          style={{
+            borderTopLeftRadius: bRad,
+            position,
+            transform: xPos.interpolate(x => `translate3d(${x}%, 0, 0)`)
+          }}
+        >
+          <Feature onClick={handleToggleSocial} />
+          <Content>
+            <Nav />
 
-          <Disclaimer />
-        </Content>
+            {props.children}
+
+            <Disclaimer />
+          </Content>
+        </Wrapper>
 
         <SocialNav />
-      </Wrapper>
+      </MainWrapper>
     </ThemeProvider>
   );
 }

@@ -7,7 +7,7 @@ import ExternalTextLink from '../actions/ExternalTextLink';
 import media from '../../utils/media';
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.gray3};
+  background-color: ${props => props.theme.gray5};
   bottom: 0;
   height: 100vh;
   left: 0;
