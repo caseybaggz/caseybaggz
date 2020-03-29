@@ -60,25 +60,25 @@ const homeContent: React$Node = (
             <Emoji label="rising" symbol="⬆️" noMargin />
             <Emoji label="sun" symbol="☀️" noMargin />
             <Emoji label="moon" symbol="🌕" noMargin />
-            Sagittarius, optimistic and blunt
+             Sagittarius, optimistic and blunt
           </Copy>
         </RealListItem>
         <RealListItem>
           <Copy>
             <Emoji label="d6" symbol="🎲" noMargin />
-            DnD campaign for over 1yr
+             DnD campaign for over 1yr
           </Copy>
         </RealListItem>
         <RealListItem>
           <Copy>
             <Emoji label="horse" symbol="🐴" noMargin />
-            Animal lover - vegan
+             Animal lover - vegan
           </Copy>
         </RealListItem>
         <RealListItem>
           <Copy>
             <Emoji label="plant" symbol="🌿" noMargin />
-            Owns over 30 house plants
+             Owns over 30 house plants
           </Copy>
         </RealListItem>
       </RealList>
