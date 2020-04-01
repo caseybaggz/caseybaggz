@@ -1,7 +1,10 @@
 ---
 path: "/work/pattyrn"
-date: "2019-05-04"
-title: "Explore Your Full Potential"
+dateFrom: "2019-05-04"
+dateTo: "2019-05-04"
+description: "Performance Web App"
+link: "https://pattyrn.com"
+title: "Pattyrn"
 ---
 
-Wahoo!
+Pattyrn sucka.
