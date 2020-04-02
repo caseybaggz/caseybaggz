@@ -30,6 +30,10 @@ As you can probably tell by now, I'm big on minimalism. I don't think products n
 
 Thus, for the product, since we are basically a performance analytics app that has the ability to really affect someone mentally and physically (career), it was/is very important that we maintain a playful design that includes micro-animations and borders trendy where necessary.
 
+Additionally, since the goal for Pattyrn is to be a high-end product, I wanted to make sure we were doing more with the design than just vomiting a chart library over every page. We've all seen a line chart - there's nothing unique to interesting about it. Thus, when I present data, I try to do so in a way that allows the user to quickly understand the information we need to portray while without an overused chart.
+
+Lastly, to build off the playful strategy, I chose to use the Octalysis Framework to bring a deep level of gamification which will help drive activity and hopefully a positive change in our users behaviors.
+
 ## The Tech 🤓
 At the end of the day, I love React and have yet to find another library/framework that is successful in delivering an easy to use composable light-weight option. Yes, I've tried Vue - get over it. My goal with this product was to deliver as performant of a front-end as possible since our API would be so advanced regarding algorithms.
 
@@ -39,3 +43,10 @@ Because we want to keep moving forward without being pulled back into the past, 
 
 ## Super N3rDy Stuff 🤓🤓🤓
 We are a Trunk-Based Dev team, so it's crucial to have a proper automation setup. For our team, I found the best setup to be our current pipeline which runs unit tests for every commit, deploys a unique build to easily review & QA each PR, runs E2E tests for the PR. When approved and merged to master we do it all over again for the dev environment, then staging, then we deploy to prod and auto tag the release. 😉
+
+## The Strategy
+As the acting product owner, I wanted to make sure we are accomplishing delivering data that not only is unique and interesting, but we are doing so in a way that is hard to duplicate. This is why we specifically have a Research and Data Analyst who's number one mission is to build a statistics dictionary for us which helps us understand how people work most efficiently.
+
+Combine this with gamification using the Octalysis Framework mentioned above and now we have an interesting product that has the power to both improve people's lives and also drive activity through fun actions like mini-tournaments, etc.
+
+Of course, everything is user tested at every level from designs, to the prototype build which we internally release first, then test with our lighthouse customers. Once we pass the lighthouse phase, we finally ship to the public. This may seem like a long process, but when you are working with performance analytics, you need to make sure they are as accurate as possible before they get into the hands of the users.
