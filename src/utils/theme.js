@@ -21,6 +21,7 @@ const theme: Object = {
   // components
 
   button: green3,
+  shadow: '0 4px 18px rgba(0, 0, 0, 0.16)',
 
   // Typography
 

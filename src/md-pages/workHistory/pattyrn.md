@@ -5,6 +5,7 @@ dateTo: "2019-05-04"
 description: "Performance Web App"
 link: "https://pattyrn.com"
 title: "Pattyrn"
+group: "work"
 ---
 
 Where do I start? 🤔
