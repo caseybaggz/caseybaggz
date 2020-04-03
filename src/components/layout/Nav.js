@@ -22,8 +22,6 @@ const NavList = styled.ul(
   align-items: center;
   display: flex;
   padding-bottom: 60px;
-  padding-left: ${props.theme.featureSidePad};
-  padding-right: ${props.theme.featureSidePad};
   width: 100%;
 `
 );

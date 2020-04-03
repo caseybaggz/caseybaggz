@@ -20,7 +20,6 @@ const Wrapper = styled.div`
 `;
 
 const Bar = styled(animated.div)`
-  background-color: ${props => props.theme.lightText};
   border-radius: 15px;
   height: 2px;
   left: 0;
@@ -29,22 +28,25 @@ const Bar = styled(animated.div)`
 `;
 
 const TopBar = styled(Bar)`
+  background-color: ${props => props.theme[`${props.kind}Text`]};
   top: 0;
   width: 100%;
 `;
 
 const BottomBar = styled(Bar)`
+  background-color: ${props => props.theme[`${props.kind}Text`]};
   bottom: 0;
   width: 20px;
 `;
 
 type Props = {
+  onClick: () => {},
   show: boolean,
-  onClick: () => {}
+  kind: string
 };
 
 function Navicon(props: Props): React$Node {
-  const { show } = props;
+  const { show, kind } = props;
   const { yPos, rot, width } = useSpring({
     rot: show ? 45 : 0,
     yPos: show ? 8 : 0,
@@ -54,6 +56,7 @@ function Navicon(props: Props): React$Node {
   return (
     <Wrapper onClick={props.onClick}>
       <TopBar
+        kind={kind}
         style={{
           transform: interpolate(
             [
@@ -65,6 +68,7 @@ function Navicon(props: Props): React$Node {
         }}
       />
       <BottomBar
+        kind={kind}
         style={{
           transform: interpolate(
             [
@@ -81,8 +85,9 @@ function Navicon(props: Props): React$Node {
 }
 
 Navicon.defaultProps = {
+  onClick: () => {},
   show: false,
-  onClick: () => {}
+  kind: 'light'
 };
 
 export default React.memo(Navicon);
