@@ -3,10 +3,11 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { animated, useSpring } from 'react-spring';
+import Navicon from '../actions/Navicon';
 import Disclaimer from '../layout/Disclaimer';
-import Feature from '../layout/Feature';
 import Nav from '../layout/Nav';
 import SocialNav from '../layout/SocialNav';
+import Headline from '../typography/Headline';
 import GlobalStyle from '../../utils/GlobalStyle';
 import theme from '../../utils/theme';
 import media from '../../utils/media';
@@ -20,19 +21,17 @@ const MainWrapper = styled.div`
 `;
 
 const Wrapper = styled(animated.div)`
+  background-color: ${props => props.theme.white};
   min-height: 100vh;
   overflow-x: hidden;
   z-index: 1;
 `;
 
 const Content = styled.div`
-  background-color: ${props => props.theme.white};
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  margin-top: 375px;
-  padding-top: 53px;
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-top: 85px;
   position: relative;
-  z-index: 2;
 
   ${media.medium} {
     margin-top: 70px;
@@ -41,20 +40,19 @@ const Content = styled.div`
   }
 `;
 
-const NavWrapper = styled.div`
-  padding-left: ${props => props.theme.featureSidePad};
-  padding-right: ${props => props.theme.featureSidePad};
+const PageHeadline = styled(Headline)`
+  color: ${props => props.theme.darkText};
+  padding-bottom: 32px;
 `;
 
 type Props = {
-  view: string,
+  headline: string,
   children: Array<Object>
 };
 
-function Layout(props: Props): React$Node {
+function DetailLayout(props: Props): React$Node {
   const [showSocial, setShowSocial] = React.useState(() => false);
-  const { bRad, position, xPos } = useSpring({
-    bRad: showSocial ? '40px' : '0px',
+  const { position, xPos } = useSpring({
     position: showSocial ? 'fixed' : 'relative',
     xPos: showSocial ? 60 : 0
   });
@@ -70,24 +68,16 @@ function Layout(props: Props): React$Node {
       <MainWrapper>
         <Wrapper
           style={{
-            borderTopLeftRadius: bRad,
             position,
             transform: xPos.interpolate(x => `translate3d(${x}%, 0, 0)`)
           }}
         >
-          <Feature
-            view={props.view}
-            showSocial={showSocial}
-            onClick={handleToggleSocial}
-          />
+          <Navicon kind="dark" show={showSocial} onClick={handleToggleSocial} />
 
           <Content>
-            <NavWrapper>
-              <Nav />
-            </NavWrapper>
-
+            <PageHeadline>{props.headline}</PageHeadline>
+            <Nav />
             {props.children}
-
             <Disclaimer />
           </Content>
         </Wrapper>
@@ -98,8 +88,8 @@ function Layout(props: Props): React$Node {
   );
 }
 
-Layout.defaultProps = {
-  view: 'main'
+DetailLayout.defaultProps = {
+  headline: ''
 };
 
-export default React.memo(Layout);
+export default React.memo(DetailLayout);
