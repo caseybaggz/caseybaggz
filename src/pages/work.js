@@ -115,7 +115,7 @@ function Work(props: Props): React$Node {
   }, [edges]);
 
   return (
-    <DetailLayout headline="Werk">
+    <DetailLayout headline="You Better Werk!">
       <HelmetMeta />
       <HistoryList>{navItems}</HistoryList>
     </DetailLayout>

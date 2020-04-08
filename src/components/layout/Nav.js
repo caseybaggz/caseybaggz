@@ -18,9 +18,10 @@ const linkData: Array<LinkType> = [
 ];
 
 const NavList = styled.ul(
-  props => `
+  (props) => `
   align-items: center;
   display: flex;
+  max-width: 500px;
   padding-bottom: 60px;
   width: 100%;
 `

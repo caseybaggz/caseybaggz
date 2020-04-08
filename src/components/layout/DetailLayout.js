@@ -8,6 +8,7 @@ import Disclaimer from '../layout/Disclaimer';
 import Nav from '../layout/Nav';
 import SocialNav from '../layout/SocialNav';
 import Headline from '../typography/Headline';
+import patternImage from '../../images/details-pattern.png';
 import GlobalStyle from '../../utils/GlobalStyle';
 import theme from '../../utils/theme';
 import media from '../../utils/media';
@@ -21,10 +22,14 @@ const MainWrapper = styled.div`
 `;
 
 const Wrapper = styled(animated.div)`
-  background-color: ${props => props.theme.white};
+  background-color: ${(props) => props.theme.white};
   min-height: 100vh;
   overflow-x: hidden;
   z-index: 1;
+
+  ${media.medium} {
+    background-color: ${(props) => props.theme.black};
+  }
 `;
 
 const Content = styled.div`
@@ -34,15 +39,35 @@ const Content = styled.div`
   position: relative;
 
   ${media.medium} {
-    margin-top: 70px;
-    margin-left: 50%;
-    width: 683px;
+    background-color: ${(props) => props.theme.white};
+    min-height: 100vh;
+    margin-left: 40%;
+    padding-left: 107px;
+    padding-top: 44px;
+    width: 60%;
+
+    &::before {
+      background: url(${patternImage}) repeat-x center center transparent;
+      background-size: contain;
+      display: block;
+      content: '';
+      height: 18px;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
   }
 `;
 
 const PageHeadline = styled(Headline)`
   color: ${props => props.theme.darkText};
   padding-bottom: 32px;
+
+  ${media.large} {
+    font-size: 64px;
+  }
 `;
 
 type Props = {
