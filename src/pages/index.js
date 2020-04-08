@@ -78,7 +78,7 @@ const homeContent: React$Node = (
         <RealListItem>
           <Copy>
             <Emoji label="plant" symbol="🌿" noMargin />
-             Owns over 30 house plants
+             #plantLady
           </Copy>
         </RealListItem>
       </RealList>
