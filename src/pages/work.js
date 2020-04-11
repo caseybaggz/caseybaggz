@@ -3,7 +3,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby'
 import styled from 'styled-components';
-import DetailLayout from '../components/layout/DetailLayout';
+import Layout from '../components/layout/Layout';
 import HelmetMeta from '../components/layout/HelmetMeta';
 import Row from '../components/layout/Row';
 import LinkArrow from '../components/icons/LinkArrow';
@@ -115,10 +115,10 @@ function Work(props: Props): React$Node {
   }, [edges]);
 
   return (
-    <DetailLayout headline="You Better Werk!">
+    <Layout headline="You Better Werk!">
       <HelmetMeta />
       <HistoryList>{navItems}</HistoryList>
-    </DetailLayout>
+    </Layout>
   );
 }
 

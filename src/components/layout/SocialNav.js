@@ -8,7 +8,6 @@ import ExternalTextLink from '../actions/ExternalTextLink';
 import media from '../../utils/media';
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.gray6};
   bottom: 0;
   height: 100vh;
   left: 0;
@@ -20,23 +19,17 @@ const Wrapper = styled.div`
 
   ${media.medium} {
     bottom: initial;
-    background-color: transparent;
-    height: initial;
-    left: 55px;
-    padding-top: initial;
-    position: absolute;
+    left: initial;
+    position: initial;
     right: initial;
-    top: 625px;
-    width: auto;
-    z-index: 1;
+    top: initial;
+    width: 33%;
+    z-index: initial;
   }
 `;
 
 const List = styled.ul`
-  ${media.medium} {
-    align-items: center;
-    display: flex;
-  }
+  height: 100%;
 `;
 
 const ListItem = styled.li`
@@ -50,10 +43,6 @@ const ListItem = styled.li`
     justify-content: center;
     padding-left: 24px;
     width: 100%;
-  }
-
-  ${media.medium} {
-    margin-right: 45px;
   }
 `;
 
