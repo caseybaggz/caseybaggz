@@ -2,9 +2,11 @@
 
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import media from '../../utils/media';
 
 const Button = styled(Link)(
-  props => `
+  (props) => `
+  appearance: none;
   background-color: ${props.theme.button};
   border-radius: 30px;
   color: ${props.theme.gray1};
@@ -21,6 +23,11 @@ const Button = styled(Link)(
   &:hover {
     color: ${props.theme.button};
     background-color: ${props.theme.black};
+  }
+
+  ${media.medium} {
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 `
 );

@@ -1,7 +1,7 @@
 ---
 path: "/work/pattyrn"
-dateFrom: "2019-05-04"
-dateTo: "2019-05-04"
+dateFrom: "2018-08-01"
+dateTo: "2018-08-01"
 description: "Performance Web App"
 link: "https://pattyrn.com"
 title: "Pattyrn"

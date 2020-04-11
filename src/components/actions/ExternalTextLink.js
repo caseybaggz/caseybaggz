@@ -16,9 +16,10 @@ const LinkItem = styled.a(
 `
 );
 
-const LinkText = styled.p(
+const LinkText = styled.span(
   (props) => `
   color: ${props.theme[props.color]};
+  display: inline-block;
   padding-left: 5px;
   font-size: ${props.size}px;
 `
