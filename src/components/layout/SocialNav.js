@@ -34,12 +34,6 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled(Headline)`
-  ${media.medium} {
-    display: none;
-  }
-`;
-
 const List = styled.ul`
   padding-top: 45px;
 
@@ -54,14 +48,6 @@ const ListItem = styled.li`
 
   ${media.medium} {
     margin-right: 45px;
-
-    .external-link {
-      color: ${props => props.theme.gray4};
-
-      &:hover {
-        color: ${props => props.theme.button};
-      }
-    }
   }
 `;
 
@@ -85,7 +71,7 @@ function SocialNav(props: Props): React$Node {
   const LinkItems: Array<React$Node> = React.useMemo(() => {
     return edges.map(edgeItem => (
       <ListItem key={edgeItem.node.id}>
-        <ExternalTextLink href={edgeItem.node.uri}>
+        <ExternalTextLink href={edgeItem.node.uri} size="24">
           {edgeItem.node.name}
         </ExternalTextLink>
       </ListItem>
@@ -94,7 +80,6 @@ function SocialNav(props: Props): React$Node {
 
   return (
     <Wrapper>
-      <Title>Social</Title>
       <List>
         {LinkItems}
       </List>

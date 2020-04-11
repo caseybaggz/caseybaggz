@@ -1,26 +1,31 @@
 [
   {
     "id": "1",
-    "name": "Twitter",
-    "uri": "https://twitter.com/caseybaggz"
-  },
-  {
-    "id": "2",
     "name": "LinkedIn",
     "uri": "https://www.linkedin.com/in/caseybaggz/"
   },
   {
-    "id": "3",
+    "id": "2",
     "name": "GitHub",
     "uri": "https://github.com/caseybaggz"
   },
   {
-    "id": "4",
+    "id": "3",
     "name": "dribbble",
     "uri": "https://dribbble.com/caseybaggz"
   },
   {
+    "id": "4",
+    "name": "Medium",
+    "uri": "https://medium.com/@caseybaggz"
+  },
+  {
     "id": "5",
+    "name": "Twitter",
+    "uri": "https://twitter.com/caseybaggz"
+  },
+  {
+    "id": "6",
     "name": "Instagram",
     "uri": "https://www.instagram.com/caseybaggz/"
   }

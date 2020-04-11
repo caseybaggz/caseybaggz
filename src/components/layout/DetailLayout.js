@@ -17,7 +17,10 @@ const MainWrapper = styled.div`
   overflow-x: hidden;
 
   ${media.medium} {
+    display: flex;
+    height: 100%;
     overflow-x: initial;
+    width: 100%;
   }
 `;
 
@@ -91,10 +94,12 @@ function DetailLayout(props: Props): React$Node {
       <GlobalStyle />
 
       <MainWrapper>
+        <SocialNav />
+
         <Wrapper
           style={{
             position,
-            transform: xPos.interpolate(x => `translate3d(${x}%, 0, 0)`)
+            transform: xPos.interpolate((x) => `translate3d(${x}%, 0, 0)`),
           }}
         >
           <Navicon kind="dark" show={showSocial} onClick={handleToggleSocial} />
@@ -106,8 +111,6 @@ function DetailLayout(props: Props): React$Node {
             <Disclaimer />
           </Content>
         </Wrapper>
-
-        <SocialNav />
       </MainWrapper>
     </ThemeProvider>
   );
