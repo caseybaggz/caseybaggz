@@ -8,7 +8,7 @@ import LaunchIcon from '../icons/Launch';
 const LinkItem = styled.a(
   (props) => `
   display: inline-block;
-  margin-left: 5px;
+  padding-left: 5px;
   transition: color 250ms ease-out;
 
   &:hover {

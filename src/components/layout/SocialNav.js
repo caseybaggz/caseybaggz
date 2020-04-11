@@ -36,13 +36,17 @@ const ListItem = styled.li`
   height: calc(100vh / 6);
 
   .external-link {
-    background-color: hsl(23, 29%, ${props => 11 * props.eq}%);
+    background-color: hsl(23, 29%, ${(props) => 11 * props.eq}%);
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     padding-left: 24px;
     width: 100%;
+
+    &:hover {
+      background-color: ${props => props.theme.green3};
+    }
   }
 `;
 
