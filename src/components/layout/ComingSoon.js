@@ -14,7 +14,7 @@ const EmojiWrapper = styled.div`
 `;
 
 const comingSoonContent: React$Node = (
-  <Layout>
+  <Layout headline="🙈 🤷‍♀️ 🙈">
     <HelmetMeta />
 
     <FeatureItem>

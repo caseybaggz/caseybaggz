@@ -13,7 +13,6 @@ type LinkType = {
 const linkData: Array<LinkType> = [
   { id: '0', label: 'Home', to: '/' },
   { id: '1', label: 'Werk', to: '/work' },
-  { id: '2', label: 'Blog', to: '/blog' },
   { id: '3', label: 'Contact', to: '/contact' }
 ];
 
@@ -49,7 +48,7 @@ const animateIn = keyframes`
 const LinkItem = styled(Link)`
   color: ${props => props.theme.darkText};
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   padding-bottom: 10px;
   position: relative;

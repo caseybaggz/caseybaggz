@@ -3,6 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Caption from '../typography/Caption';
+import media from '../../utils/media';
 
 const Wrapper = styled.div`
   padding-bottom: 73px;
@@ -15,9 +16,11 @@ const Box = styled.div`
   flex-direction: column;
   height: 190px;
   justify-content: center;
-  padding-left: 40px;
-  padding-right: 40px;
   width: 100%;
+
+  ${media.medium} {
+    height: 300px;
+  }
 `;
 
 const Note = styled.p`

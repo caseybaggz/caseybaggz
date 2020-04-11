@@ -31,22 +31,20 @@ const ButtonWrapper = styled(FeatureItem)`
 `;
 
 const homeContent: React$Node = (
-  <Layout>
+  <Layout headline="Howzit?! ✌️">
     <HelmetMeta />
 
     <FeatureItem>
       <Illustration />
       <InfoSection headline="Catchy Title">
-        What if product or portfolio sites were unique, refreshing, and not just
-        an overused template?
+        Welcome to the madness that is my free time and experimentation station. Sometimes it will make sense, other times, it won't. Either way, enjoy yourself peeking around.
         <br />
         <br />
         <strong>This site is my artistic way of breaking the monotony.</strong>
         <br />
         <br />
         I’m the Technical Product Owner, Lead Frontend Engineer/Manager, Lead
-        Designer, and overall Mastermind behind
-        <ExternalTextLink href="https://pattyrn.com/">Pattyrn</ExternalTextLink>
+        Designer, and overall Mastermind behind Pattyrn.
       </InfoSection>
     </FeatureItem>
 
@@ -86,7 +84,7 @@ const homeContent: React$Node = (
 
     <ButtonWrapper>
       <Button to="/contact" width="100%">
-        Final Contact Opportunity
+        Final Contact Opportunity???
       </Button>
     </ButtonWrapper>
   </Layout>
