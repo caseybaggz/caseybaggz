@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import ExternalTextLink from '../components/actions/ExternalTextLink';
 import HelmetMeta from '../components/layout/HelmetMeta';
-import DetailLayout from '../components/layout/DetailLayout';
+import Layout from '../components/layout/Layout';
 import Headline from '../components/typography/Headline';
 import SmallHeadline from '../components/typography/SmallHeadline';
 import Caption from '../components/typography/Caption';
@@ -39,7 +39,7 @@ function WorkPlace(props: Props): React$Node {
   const { title } = frontmatter;
 
   return (
-    <DetailLayout>
+    <Layout>
       <HelmetMeta />
 
       <Headline>{title}</Headline>
@@ -47,7 +47,7 @@ function WorkPlace(props: Props): React$Node {
       <Caption>{frontmatter.dateFrom} to {frontmatter.dateTo}</Caption>
       <ExternalTextLink href={frontmatter.link}>{title}</ExternalTextLink>
       <Wrapper dangerouslySetInnerHTML={{ __html: html }} />
-    </DetailLayout>
+    </Layout>
   );
 }
 

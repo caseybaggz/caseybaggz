@@ -1,26 +1,37 @@
 [
   {
+    "icon": "linkedin-in",
     "id": "1",
-    "name": "Twitter",
-    "uri": "https://twitter.com/caseybaggz"
-  },
-  {
-    "id": "2",
     "name": "LinkedIn",
     "uri": "https://www.linkedin.com/in/caseybaggz/"
   },
   {
-    "id": "3",
+    "icon": "github",
+    "id": "2",
     "name": "GitHub",
     "uri": "https://github.com/caseybaggz"
   },
   {
-    "id": "4",
+    "icon": "dribbble",
+    "id": "3",
     "name": "dribbble",
     "uri": "https://dribbble.com/caseybaggz"
   },
   {
+    "icon": "medium-m",
+    "id": "4",
+    "name": "Medium",
+    "uri": "https://medium.com/@caseybaggz"
+  },
+  {
+    "icon": "twitter",
     "id": "5",
+    "name": "Twitter",
+    "uri": "https://twitter.com/caseybaggz"
+  },
+  {
+    "icon": "instagram",
+    "id": "6",
     "name": "Instagram",
     "uri": "https://www.instagram.com/caseybaggz/"
   }

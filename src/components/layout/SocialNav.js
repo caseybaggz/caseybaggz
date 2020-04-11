@@ -2,18 +2,16 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import Headline from '../typography/Headline';
 import ExternalTextLink from '../actions/ExternalTextLink';
 import media from '../../utils/media';
 
 const Wrapper = styled.div`
-  background-color: ${props => props.theme.gray6};
   bottom: 0;
   height: 100vh;
   left: 0;
-  padding-left: 24px;
-  padding-top: 100px;
   position: fixed;
   right: 0;
   top: 0;
@@ -22,48 +20,42 @@ const Wrapper = styled.div`
 
   ${media.medium} {
     bottom: initial;
-    background-color: transparent;
-    height: initial;
-    left: 55px;
-    padding-top: initial;
-    position: absolute;
+    left: initial;
+    position: initial;
     right: initial;
-    top: 625px;
-    width: auto;
-    z-index: 1;
-  }
-`;
-
-const Title = styled(Headline)`
-  ${media.medium} {
-    display: none;
+    top: initial;
+    width: 33%;
+    z-index: initial;
   }
 `;
 
 const List = styled.ul`
-  padding-top: 45px;
-
-  ${media.medium} {
-    align-items: center;
-    display: flex;
-  }
+  height: 100%;
 `;
 
 const ListItem = styled.li`
-  margin-bottom: 45px;
+  height: calc(100vh / 6);
 
-  ${media.medium} {
-    margin-right: 45px;
+  .external-link {
+    background-color: hsl(23, 29%, ${(props) => 11 * props.eq}%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-left: 24px;
+    width: 100%;
 
-    .external-link {
-      color: ${props => props.theme.gray4};
-
-      &:hover {
-        color: ${props => props.theme.button};
-      }
+    &:hover {
+      background-color: ${props => props.theme.green3};
     }
   }
 `;
+
+const SocialNavFaStyle: {
+  paddingRight: string,
+} = {
+  paddingRight: '10px',
+};
 
 type Props = {};
 
@@ -74,6 +66,7 @@ function SocialNav(props: Props): React$Node {
         edges {
           node {
             id
+            icon
             name
             uri
           }
@@ -83,10 +76,20 @@ function SocialNav(props: Props): React$Node {
   `);
   const { edges } = data.allSocialLinksJson;
   const LinkItems: Array<React$Node> = React.useMemo(() => {
-    return edges.map(edgeItem => (
-      <ListItem key={edgeItem.node.id}>
-        <ExternalTextLink href={edgeItem.node.uri}>
-          {edgeItem.node.name}
+    return edges.map((edgeItem, eq) => (
+      <ListItem key={edgeItem.node.id} eq={eq}>
+        <ExternalTextLink
+          href={edgeItem.node.uri}
+          size="24"
+          kind="light"
+          linkText={edgeItem.node.name}
+        >
+          <FontAwesomeIcon
+            color="#fffffe"
+            icon={['fab', edgeItem.node.icon]}
+            style={SocialNavFaStyle}
+            size="3x"
+          />
         </ExternalTextLink>
       </ListItem>
     ));
@@ -94,7 +97,6 @@ function SocialNav(props: Props): React$Node {
 
   return (
     <Wrapper>
-      <Title>Social</Title>
       <List>
         {LinkItems}
       </List>

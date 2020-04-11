@@ -7,6 +7,7 @@ import media from '../../utils/media';
 
 const Wrapper = styled.div`
   display: inline-block;
+  cursor: pointer;
   height: 18px;
   left: 31px;
   position: fixed;

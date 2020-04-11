@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.theme.black};
+    background-color: ${props => props.theme.white};
   }
 
   ul {
