@@ -12,8 +12,6 @@ const Wrapper = styled.div`
   bottom: 0;
   height: 100vh;
   left: 0;
-  padding-left: 24px;
-  padding-top: 100px;
   position: fixed;
   right: 0;
   top: 0;
@@ -35,8 +33,6 @@ const Wrapper = styled.div`
 `;
 
 const List = styled.ul`
-  padding-top: 45px;
-
   ${media.medium} {
     align-items: center;
     display: flex;
@@ -44,7 +40,17 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-  margin-bottom: 45px;
+  height: calc(100vh / 6);
+
+  .external-link {
+    background-color: hsl(23, 29%, ${props => 11 * props.eq}%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding-left: 24px;
+    width: 100%;
+  }
 
   ${media.medium} {
     margin-right: 45px;
@@ -69,9 +75,9 @@ function SocialNav(props: Props): React$Node {
   `);
   const { edges } = data.allSocialLinksJson;
   const LinkItems: Array<React$Node> = React.useMemo(() => {
-    return edges.map(edgeItem => (
-      <ListItem key={edgeItem.node.id}>
-        <ExternalTextLink href={edgeItem.node.uri} size="24">
+    return edges.map((edgeItem, eq) => (
+      <ListItem key={edgeItem.node.id} eq={eq}>
+        <ExternalTextLink href={edgeItem.node.uri} size="24" kind="light">
           {edgeItem.node.name}
         </ExternalTextLink>
       </ListItem>
