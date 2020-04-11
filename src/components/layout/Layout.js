@@ -2,6 +2,8 @@
 
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import { animated, useSpring } from 'react-spring';
 import Navicon from '../actions/Navicon';
 import Disclaimer from '../layout/Disclaimer';
@@ -12,6 +14,9 @@ import patternImage from '../../images/details-pattern.png';
 import GlobalStyle from '../../utils/GlobalStyle';
 import theme from '../../utils/theme';
 import media from '../../utils/media';
+
+// fontawesome
+library.add(fab);
 
 const MainWrapper = styled.div`
   overflow-x: hidden;

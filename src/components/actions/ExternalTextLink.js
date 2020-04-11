@@ -8,7 +8,6 @@ import LaunchIcon from '../icons/Launch';
 const LinkItem = styled.a(
   (props) => `
   display: inline-block;
-  padding-left: 5px;
   transition: color 250ms ease-out;
 
   &:hover {
@@ -20,6 +19,7 @@ const LinkItem = styled.a(
 const LinkText = styled.p(
   (props) => `
   color: ${props.theme[props.color]};
+  padding-left: 5px;
   font-size: ${props.size}px;
 `
 );
@@ -38,6 +38,7 @@ type Props = {
   children: any,
   href: string,
   kind: string,
+  linkText: string,
   size?: string
 };
 
@@ -53,7 +54,10 @@ function ExternalTextLink(props: Props): React$Node {
       rel="noopener noreferrer"
     >
       <Row>
-        <LinkText color={color} size={size}>{props.children}</LinkText>
+        {props.children}
+        <LinkText color={color} size={size}>
+          {props.linkText}
+        </LinkText>
         <IconWrapper size={size}>
           <LaunchIcon color={color} />
         </IconWrapper>
@@ -65,6 +69,7 @@ function ExternalTextLink(props: Props): React$Node {
 ExternalTextLink.defaultProps = {
   href: '',
   kind: 'dark',
+  linkText: '',
   size: '16'
 };
 

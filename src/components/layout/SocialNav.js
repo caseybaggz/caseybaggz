@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
 import Headline from '../typography/Headline';
 import ExternalTextLink from '../actions/ExternalTextLink';
@@ -50,6 +51,12 @@ const ListItem = styled.li`
   }
 `;
 
+const SocialNavFaStyle: {
+  paddingRight: string,
+} = {
+  paddingRight: '10px',
+};
+
 type Props = {};
 
 function SocialNav(props: Props): React$Node {
@@ -59,6 +66,7 @@ function SocialNav(props: Props): React$Node {
         edges {
           node {
             id
+            icon
             name
             uri
           }
@@ -70,8 +78,18 @@ function SocialNav(props: Props): React$Node {
   const LinkItems: Array<React$Node> = React.useMemo(() => {
     return edges.map((edgeItem, eq) => (
       <ListItem key={edgeItem.node.id} eq={eq}>
-        <ExternalTextLink href={edgeItem.node.uri} size="24" kind="light">
-          {edgeItem.node.name}
+        <ExternalTextLink
+          href={edgeItem.node.uri}
+          size="24"
+          kind="light"
+          linkText={edgeItem.node.name}
+        >
+          <FontAwesomeIcon
+            color="#fffffe"
+            icon={['fab', edgeItem.node.icon]}
+            style={SocialNavFaStyle}
+            size="3x"
+          />
         </ExternalTextLink>
       </ListItem>
     ));
