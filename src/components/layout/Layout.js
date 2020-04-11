@@ -32,6 +32,9 @@ const Wrapper = styled(animated.div)`
   z-index: 1;
 
   ${media.medium} {
+    height: 100vh;
+    overflow-x: initial;
+    overflow-y: auto;
     width: 67%;
   }
 `;
