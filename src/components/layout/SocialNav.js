@@ -36,6 +36,18 @@ const List = styled.ul`
 const ListItem = styled.li`
   height: calc(100vh / 6);
 
+  &:last-of-type {
+    .external-link {
+      padding-bottom: 60px;
+    }
+
+    ${media.medium} {
+      .external-link {
+        padding-bottom: initial;
+      }
+    }
+  }
+
   .external-link {
     background-color: hsl(23, 29%, ${(props) => 11 * props.eq}%);
     display: flex;
@@ -46,7 +58,7 @@ const ListItem = styled.li`
     width: 100%;
 
     &:hover {
-      background-color: ${props => props.theme.green3};
+      background-color: ${(props) => props.theme.green3};
     }
   }
 `;
