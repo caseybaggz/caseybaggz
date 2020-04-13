@@ -7,21 +7,41 @@ import Layout from '../components/layout/Layout';
 import HelmetMeta from '../components/layout/HelmetMeta';
 import Row from '../components/layout/Row';
 import LinkArrow from '../components/icons/LinkArrow';
+import media from '../utils/media';
 
 const linkBorderRadius: string = '25px';
+const workListMargin: string = '33px';
 
 const HistoryList = styled.ul`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
   li {
-    margin-bottom: 33px;
+    margin-bottom: ${workListMargin};
+    max-width: 352px;
+    width: 100%;
+  }
+
+  .work-link {
+    display: inline-block;
+    width: 100%;
+  }
+
+  ${media.medium} {
+    li {
+      margin-right: ${workListMargin};
+    }
   }
 `;
 
 const Wrapper = styled.div`
   border-radius: ${linkBorderRadius};
   box-shadow: ${props => props.theme.shadow};
-  max-width: 352px;
   transition: transform 250ms ease-out;
   will-change: transform;
+  width: 100%;
 
   &:hover {
     transform: scale(1.03);
@@ -95,7 +115,7 @@ function Work(props: Props): React$Node {
 
       return (
         <li key={item.node.id}>
-          <Link to={frontmatter.path}>
+          <Link className="work-link" to={frontmatter.path}>
             <Wrapper>
               <Header>
                 <Letter>{letter}</Letter>
