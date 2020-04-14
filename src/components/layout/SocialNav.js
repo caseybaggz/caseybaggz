@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   bottom: 0;
   height: 100vh;
   left: 0;
+  overflow-y: auto;
   position: fixed;
   right: 0;
   top: 0;
@@ -21,6 +22,7 @@ const Wrapper = styled.div`
   ${media.medium} {
     bottom: initial;
     left: initial;
+    overflow-y: initial;
     position: initial;
     right: initial;
     top: initial;
@@ -35,18 +37,6 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   height: calc(100vh / 6);
-
-  &:last-of-type {
-    .external-link {
-      padding-bottom: 60px;
-    }
-
-    ${media.medium} {
-      .external-link {
-        padding-bottom: initial;
-      }
-    }
-  }
 
   .external-link {
     background-color: hsl(23, 29%, ${(props) => 11 * props.eq}%);

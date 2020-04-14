@@ -46,6 +46,16 @@ const LinkWrapper = styled.div(
   text-align: center;
   width: 100%;
 
+  .external-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
+  .external-row {
+    justify-content: center;
+  }
+
   &:hover {
     color: ${props.theme.button};
     background-color: ${props.theme.gray4};

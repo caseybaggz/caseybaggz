@@ -54,7 +54,7 @@ function ExternalTextLink(props: Props): React$Node {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <Row>
+      <Row className="external-row">
         {props.children}
         <LinkText color={color} size={size}>
           {props.linkText}
