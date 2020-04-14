@@ -5,6 +5,7 @@ Built with Gatsby in my off hours when I have free time (rare).
 * Werk page (in progress)
 * Contact page
 * Blog page (convert from Medium)
+* Fine tune social nav on mobile
 * Add animations and advanced layouts
 * Party 🎉
 

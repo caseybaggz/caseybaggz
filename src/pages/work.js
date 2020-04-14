@@ -10,7 +10,7 @@ import LinkArrow from '../components/icons/LinkArrow';
 import media from '../utils/media';
 
 const linkBorderRadius: string = '25px';
-const workListMargin: string = '33px';
+const workListMargin: string = '12px';
 
 const HistoryList = styled.ul`
   align-items: center;
@@ -20,7 +20,7 @@ const HistoryList = styled.ul`
 
   li {
     margin-bottom: ${workListMargin};
-    max-width: 352px;
+    max-width: 334px;
     width: 100%;
   }
 
