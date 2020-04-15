@@ -4,7 +4,7 @@ dateFrom: "2015-06-01"
 dateTo: "2016-09-01"
 description: "Mobile App (iOS/Android)"
 link: "https://bibleappforkids.com/"
-title: "Bible App for Kids"
+title: "Bible App"
 group: "work"
 ---
 
