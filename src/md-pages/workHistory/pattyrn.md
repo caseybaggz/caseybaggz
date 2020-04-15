@@ -2,7 +2,7 @@
 path: "/work/pattyrn"
 dateFrom: "2018-08-01"
 dateTo: "2018-08-01"
-description: "Performance Web App"
+description: "React Web App"
 link: "https://pattyrn.com"
 title: "Pattyrn"
 group: "work"
