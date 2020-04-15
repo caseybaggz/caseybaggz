@@ -10,7 +10,7 @@ import LinkArrow from '../components/icons/LinkArrow';
 import media from '../utils/media';
 
 const linkBorderRadius: string = '25px';
-const workListMargin: string = '12px';
+const workListMargin: string = '18px';
 
 const HistoryList = styled.ul`
   align-items: center;
@@ -30,6 +30,8 @@ const HistoryList = styled.ul`
   }
 
   ${media.medium} {
+    justify-content: flex-start;
+
     li {
       margin-right: ${workListMargin};
     }
@@ -145,6 +147,7 @@ function Work(props: Props): React$Node {
 export const WorkQuery = graphql`
   query {
     allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___dateTo },
       filter: { frontmatter: { group: { eq: "work" } } }
     ) {
       edges {
