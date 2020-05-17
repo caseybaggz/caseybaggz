@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "develop": "gatsby develop",
+    "test": "",
     "flow": "flow --max-warnings 0",
     "build": "gatsby build",
     "serve": "gatsby serve",
