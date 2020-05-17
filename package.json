@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "gatsby clean",
     "develop": "gatsby develop",
+    "flow": "flow --max-warnings 0",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "deploy": "gatsby build && gh-pages -d public"
@@ -39,6 +40,7 @@
     "typography": "^0.16.19"
   },
   "devDependencies": {
+    "flow-bin": "^0.125.1",
     "gh-pages": "^2.2.0"
   },
   "version": "1.0.0"
