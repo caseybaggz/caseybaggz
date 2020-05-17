@@ -41,12 +41,12 @@ const BottomBar = styled(Bar)`
 `;
 
 type Props = {
-  onClick: () => {},
+  onClick: () => void,
   show: boolean,
   kind: string
 };
 
-function Navicon(props: Props): React$Node {
+function Navicon(props: Props) {
   const { show, kind } = props;
   const { yPos, rot, width } = useSpring({
     rot: show ? 45 : 0,
@@ -91,4 +91,4 @@ Navicon.defaultProps = {
   kind: 'light'
 };
 
-export default React.memo(Navicon);
+export default React.memo<Props>(Navicon);

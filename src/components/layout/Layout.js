@@ -80,11 +80,11 @@ const PageHeadline = styled(Headline)`
 `;
 
 type Props = {
-  headline: string,
+  headline?: string,
   children: Array<Object>,
 };
 
-function Layout(props: Props): React$Node {
+function Layout(props: Props) {
   const [showSocial, setShowSocial] = React.useState(() => false);
   const { position, xPos } = useSpring({
     position: showSocial ? 'fixed' : 'relative',
@@ -126,4 +126,4 @@ Layout.defaultProps = {
   headline: '',
 };
 
-export default React.memo(Layout);
+export default React.memo<Props>(Layout);

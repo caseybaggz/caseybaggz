@@ -14,7 +14,7 @@ type Props = {
   headline: string
 };
 
-function InfoSection(props: Props): React$Node {
+function InfoSection(props: Props) {
   return (
     <div>
       <Headline>{props.headline}</Headline>
@@ -27,4 +27,4 @@ InfoSection.defaultProps = {
   headline: 'Headline'
 };
 
-export default React.memo(InfoSection);
+export default React.memo<Props>(InfoSection);

@@ -108,7 +108,7 @@ type Props = {
   }
 };
 
-function Work(props: Props): React$Node {
+function Work(props: Props) {
   const { edges } = props.data.allMarkdownRemark;
   const navItems: Array<React$Node> = React.useMemo(() => {
     return edges.map(item => {
@@ -164,4 +164,4 @@ export const WorkQuery = graphql`
   }
 `;
 
-export default React.memo(Work);
+export default React.memo<Props>(Work);

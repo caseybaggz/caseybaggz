@@ -9,10 +9,10 @@ import AppleFav from '../../images/manifest/touch-icon-retina.png';
 import Favicon from '../../images/manifest/favicon.png';
 
 type Props = {
-  title: string
+  title?: string
 };
 
-function HelmetMeta(props: Props): React$Node {
+function HelmetMeta(props: Props) {
   return(
       <Helmet>
         <meta charSet="utf-8" />
@@ -52,4 +52,4 @@ HelmetMeta.defaultProps = {
   title: '💀 ⬛️'
 };
 
-export default React.memo(HelmetMeta);
+export default React.memo<Props>(HelmetMeta);

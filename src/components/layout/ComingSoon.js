@@ -35,8 +35,8 @@ const comingSoonContent: React$Node = (
 
 type Props = {};
 
-function ComingSoon(props: Props): React$Node {
+function ComingSoon(props: Props) {
   return comingSoonContent;
 }
 
-export default React.memo(ComingSoon);
+export default React.memo<Props>(ComingSoon);

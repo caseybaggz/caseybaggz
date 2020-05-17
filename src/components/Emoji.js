@@ -13,11 +13,11 @@ const EmojiSpan = styled.span(
 type Props = {
   label: string,
   noMargin?: boolean,
-  size: string,
+  size?: string,
   symbol: string
 };
 
-function Emoji(props: Props): React.Node {
+function Emoji(props: Props) {
   return (
     <EmojiSpan
       className="emoji"
@@ -39,4 +39,4 @@ Emoji.defaultProps = {
   symbol: '🎉'
 };
 
-export default React.memo(Emoji);
+export default React.memo<Props>(Emoji);

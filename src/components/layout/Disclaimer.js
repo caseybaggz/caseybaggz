@@ -22,8 +22,8 @@ const disclaimerContent: React$Node = (
 
 type Props = {};
 
-function Disclaimer(props: Props): React$Node {
+function Disclaimer(props: Props) {
   return disclaimerContent;
 }
 
-export default React.memo(Disclaimer);
+export default React.memo<Props>(Disclaimer);

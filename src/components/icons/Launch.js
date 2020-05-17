@@ -7,7 +7,7 @@ type Props = {
   color: string
 };
 
-function LaunchIcon(props: Props): React$Node {
+function LaunchIcon(props: Props) {
   return (
     <ThemeConsumer>
       {theme => (
@@ -26,4 +26,4 @@ LaunchIcon.defaultProps = {
   color: 'gray2'
 };
 
-export default React.memo(LaunchIcon);
+export default React.memo<Props>(LaunchIcon);

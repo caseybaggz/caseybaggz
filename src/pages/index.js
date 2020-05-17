@@ -92,8 +92,8 @@ const homeContent: React$Node = (
 
 type Props = {};
 
-function Home(props: Props): React$Node {
+function Home(props: Props) {
   return homeContent;
 }
 
-export default React.memo(Home);
+export default React.memo<Props>(Home);

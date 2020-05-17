@@ -38,14 +38,14 @@ const IconWrapper = styled.span(
 type Props = {
   children: any,
   href: string,
-  kind: string,
-  linkText: string,
+  kind?: string,
+  linkText?: string,
   size?: string
 };
 
-function ExternalTextLink(props: Props): React$Node {
+function ExternalTextLink(props: Props) {
   const { size } = props;
-  const color: string = `${props.kind}Text`;
+  const color: string = `${props.kind || ''}Text`;
 
   return (
     <LinkItem
@@ -74,4 +74,4 @@ ExternalTextLink.defaultProps = {
   size: '16'
 };
 
-export default React.memo(ExternalTextLink);
+export default React.memo<Props>(ExternalTextLink);
