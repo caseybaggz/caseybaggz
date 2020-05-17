@@ -61,7 +61,7 @@ const SocialNavFaStyle: {
 
 type Props = {};
 
-function SocialNav(props: Props): React$Node {
+function SocialNav(props: Props) {
   const data = useStaticQuery(graphql`
     query SocialNavQuery {
       allSocialLinksJson {
@@ -106,4 +106,4 @@ function SocialNav(props: Props): React$Node {
   );
 }
 
-export default React.memo(SocialNav);
+export default React.memo<Props>(SocialNav);

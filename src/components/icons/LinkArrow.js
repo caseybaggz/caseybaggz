@@ -7,7 +7,7 @@ type Props = {
   color: string
 };
 
-function LinkArrow(props: Props): React$Node {
+function LinkArrow(props: Props) {
   return (
     <ThemeConsumer>
       {theme => (
@@ -32,4 +32,4 @@ LinkArrow.defaultProps = {
   color: 'darkText'
 };
 
-export default React.memo(LinkArrow);
+export default React.memo<Props>(LinkArrow);

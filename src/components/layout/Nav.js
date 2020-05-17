@@ -75,7 +75,7 @@ const LinkItem = styled(Link)`
 
 type Props = {};
 
-function Nav(props: Props): React$Node {
+function Nav(props: Props) {
   const linkItems: Array<React$Node> = React.useMemo(() => {
     return linkData.map(link => (
       <NavItem key={link.id}>
@@ -93,4 +93,4 @@ function Nav(props: Props): React$Node {
   );
 }
 
-export default React.memo(Nav);
+export default React.memo<Props>(Nav);

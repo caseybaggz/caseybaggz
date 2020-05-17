@@ -41,8 +41,8 @@ const illustrationContent: React$Node = (
 
 type Props = {};
 
-function Illustration(props: Props): React$Node {
+function Illustration(props: Props) {
   return illustrationContent;
 }
 
-export default React.memo(Illustration);
+export default React.memo<Props>(Illustration);

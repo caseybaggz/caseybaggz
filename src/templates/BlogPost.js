@@ -24,7 +24,7 @@ type Props = {
   }
 };
 
-function BlogPost(props: Props): React$Node {
+function BlogPost(props: Props) {
   const { frontmatter, html } = props.data.markdownRemark;
 
   return (
@@ -51,4 +51,4 @@ export const BlogQuery = graphql`
   }
 `;
 
-export default React.memo(BlogPost);
+export default React.memo<Props>(BlogPost);

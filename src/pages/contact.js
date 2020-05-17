@@ -5,8 +5,8 @@ import ComingSoon from '../components/layout/ComingSoon';
 
 type Props = {};
 
-function Contact(props: Props): React$Node {
+function Contact(props: Props) {
   return <ComingSoon />;
 }
 
-export default React.memo(Contact);
+export default React.memo<Props>(Contact);

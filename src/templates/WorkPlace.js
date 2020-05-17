@@ -78,7 +78,7 @@ type Props = {
   }
 };
 
-function WorkPlace(props: Props): React$Node {
+function WorkPlace(props: Props) {
   const { frontmatter, html } = props.data.markdownRemark;
   const { dateFrom, dateTo, title } = frontmatter;
   const isToday: boolean = dateFrom === dateTo;
@@ -114,4 +114,4 @@ export const WorkPlaceQuery = graphql`
          }
        `;
 
-export default React.memo(WorkPlace);
+export default React.memo<Props>(WorkPlace);

@@ -5,8 +5,8 @@ import ComingSoon from '../components/layout/ComingSoon';
 
 type Props = {};
 
-function Blog(props: Props): React$Node {
+function Blog(props: Props) {
   return <ComingSoon />;
 }
 
-export default React.memo(Blog);
+export default React.memo<Props>(Blog);
