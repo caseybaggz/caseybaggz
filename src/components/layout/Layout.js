@@ -80,7 +80,7 @@ const PageHeadline = styled(Headline)`
 `;
 
 type Props = {
-  headline: string,
+  headline?: string,
   children: Array<Object>,
 };
 

@@ -4,7 +4,7 @@ import React from 'react';
 import { ThemeConsumer } from 'styled-components';
 
 type Props = {
-  color: string
+  color?: string
 };
 
 function LinkArrow(props: Props) {
